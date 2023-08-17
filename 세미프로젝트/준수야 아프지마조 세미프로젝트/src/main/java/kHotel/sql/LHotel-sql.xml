@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>LHotel-sql.xml</comment>
+
+	<!-- 객실 번호 조회 -->
+	<entry key="searchRoomNo">
+		SELECT ROOM_NO FROM ROOM
+		JOIN HOTEL USING(HOTEL_NO)
+		WHERE HOTEL_TITLE = ?
+		AND ROOM_NM = ?
+	</entry>
+	
+	<!-- 찜목록 추가 -->
+	<entry key="insertLikeList">
+		INSERT INTO LIKELIST
+		VALUES(?, ?)
+	</entry>
+
+	<!-- 찜 삭제 -->
+	<entry key="deleteLikeList">
+		DELETE FROM LIKELIST
+		WHERE ROOM_NO = ?
+		AND MEMBER_NO = ?
+	</entry>
+	
+	<!-- 찜 여부 확인 -->
+	<entry key="likeCount">
+		SELECT COUNT(*)
+		FROM LIKELIST
+		WHERE MEMBER_NO = ?
+		AND ROOM_NO = ?
+	</entry>
+
+</properties>

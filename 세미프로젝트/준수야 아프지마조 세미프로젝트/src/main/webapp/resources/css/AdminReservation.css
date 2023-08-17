@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Pretendard-Regular';
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+} 
+
+.C-adminrsv-container{ /* 바디 큰 틀 */
+    width: 100%;
+    height: auto;
+}
+
+.C-adminrsv-body{ /* 사이드바 + 메인 */
+    width: 1200px;
+    height: 820px;
+    margin: auto;
+    display: flex;
+    padding: 20px 0;
+}
+
+.C-adminrsv-sidebar{ /* 사이드바 큰 틀 */
+    width: 25%;
+}
+
+.C-adminrsv-main{ /* 메인 큰틀 */
+    width: 75%;
+}
+
+#adminRsvList{
+    width: 100%;
+}
+
+#Ctitle{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.C-rsvlist-container{ /* 리스트 내역 전체 틀 */
+    display: flex;
+    height: 50px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(178, 158, 135, 0.9);
+}
+
+.C-rsvlist-container > div:nth-child(1){ /* 예약 번호 */
+    width: 15%;
+    text-align: center;
+}
+
+.C-rsvlist-container > div:nth-child(2){ /* 호텔지점 */
+    width: 10%;
+    text-align: center;
+}
+.C-rsvlist-container > div:nth-child(3){ /* 방이름 */
+    width: 15%;
+    text-align: center;
+}
+
+.C-rsvlist-container > div:nth-child(4){ /* 예약자 */
+    width: 15%;
+    text-align: center;
+}
+.C-rsvlist-container > div:nth-child(5){ /* 예약 날짜 */
+    width: 20%;
+    text-align: center;
+}
+.C-rsvlist-container > div:nth-child(6){ /* 예약 취소 버튼  */
+    width: 15%;
+    text-align: center;
+}
+
+.C-adminreservation{ /* 예약확인 화면 */
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(178, 158, 135, 0.9);;
+}
+
+
+.C-adminreservation-title1{ /* 예약관리 글씨 부분 */
+    width: 820px;
+    font-size: 28px;
+    font-weight: bold;
+    margin: auto;
+    padding: 50px;
+}
+
+.C-adminRsv-div{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 70px;
+}
+
+.C-adminreservation-search{ /* 예약객실확인 input */
+    height: 30px;
+}
+
+.C-adminreservation-btn{ /* 예약객실확인 버튼 */
+    width: 50px;
+    height: 30px;
+}
+
+#C-adminreservation-menu{ /*select */
+    width: 13%;
+}
+.C-adminrsvlist{/* 예약내역 list */
+    display: flex;
+    width: 820px;
+    height: 550px;
+    margin: auto;
+    border: 1px sold rgba(178, 158, 135, 0.9);
+    overflow: auto;
+}
+.hide{
+    display: none;
+}
+
+
+.C-pagenation{ /* 페이지네이션 전체 div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .pagination{
+    display: flex;
+ }

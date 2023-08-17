@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Pretendard-Regular';
+
+}
+
+.P-top {
+    position: relative;
+    height: 950px;
+    min-width: 1500px;
+    width: 100%;
+    margin: 0;
+}
+
+.P-top > img{
+    width: 100%;
+    height: 1000px;
+    margin: 0;
+}
+
+.P-udg-body {
+    /* 큰 틀 */
+    background-color: white;
+    position: absolute;
+    top:120px;
+    left: 450px;
+    border: 1px solid black;
+    width: 1000px;
+    height: 800px;
+    visibility: hidden;
+
+    border: none;
+}
+
+.P-udg-body>div:nth-of-type(2){
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: #726d6d;
+}
+
+.J-header > img {
+    position: absolute;
+  
+    width: 300px;
+    height: 150px;
+  
+    left: 800px;
+    top: 20px;
+  }
+
+.P-udg-title {
+    /* 업다운게임 글씨 */
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#P-info {
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.P-udg-message {
+    font-size: 14px;
+    letter-spacing: -1px;
+    /* 자간 */
+}
+
+
+
+/* input을 감싸고 있는 div */
+.p-input-area {
+    width: 30%;
+    height: 50px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+}
+
+.p-input-area:focus-within {
+    border-bottom: 2px solid rgb(173, 158, 135);
+    ;
+}
+
+.P-game{
+    position: absolute;
+    top:31%;
+    left: 31.5%;
+    font-weight: bold;
+}
+
+.P-game {
+    cursor: pointer;
+    font-size: 90px;
+  line-height: calc(20px + 20vh);
+/*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  font-family: "Sacramento", cursive;
+  text-align: center;
+  animation: blink 12s infinite;
+  -webkit-animation: blink 12s infinite;
+}
+
+
+@-webkit-keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+  /*     color: #fccaff;
+      text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+        0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+      color: #fff6a9;
+    }
+  }
+  
+  @keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+  /*     color: #fccaff;
+      text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+        0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+      color: #fff6a9;
+    }
+  }
+  
+
+/* input 태그 */
+
+#p-udg-input2 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 150px;
+    text-align: center;
+    width: 70%;
+    height: 100%;
+    padding: 15px 10px 5px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    border: 0;
+    outline: 0;
+}
+
+
+#p-udg-btn {
+    text-align: center;
+    background-color: rgb(173, 158, 135);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    margin-left: 40px;
+    margin-right: 8px;
+
+    width: 20%;
+}
+
+#p-udg-btn:hover {
+    background-color: #4F3A28;
+}
+
+
+.p-udg-message {
+    font-size: 15px;
+    letter-spacing: -1px;
+    /* 자간 */
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 150px;
+}
+
+.confirm {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+/* 숫자입력 */
+.P-udg {
+    overflow: auto;
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-align: center;
+    border: 3px solid #ddd;
+}

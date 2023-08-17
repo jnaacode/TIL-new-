@@ -1,0 +1,95 @@
+/* div{border: 1px solid black;} */
+
+body{
+  margin: auto;
+}
+
+.bodyAll{ /* 바디 전체를 감싸는 div */
+  width: 1200px;
+  height: auto;
+  display: flex;
+  margin: auto;
+}
+
+.sidebar-area{
+  width: 25%;
+}
+
+section{
+  width: 75%;
+  margin: auto;
+}
+
+.list{
+    justify-content: center;
+    height: 100px;
+    text-align: center;
+ }
+ 
+ .body1img{
+   width: 400px;
+   height: 250px;
+   margin: auto;
+ }
+ 
+ 
+ .body1{
+   width: 75%;
+   height: auto;
+ }
+ 
+ .body2{
+   display: flex;
+ }
+ 
+ .body2img{
+   width: 400px;
+   height: 250px;
+   margin: auto;
+ }
+ 
+ 
+ .H-info-text{ /* 글씨 부분 큰 div */
+   width: 50%;
+   margin-right: 100px;
+ }
+ 
+ .H-info-text li{
+   text-align: left;
+ }
+ 
+ .H-info-text pre{
+   font-size: 18px;
+ }
+ 
+ body{
+    margin: auto;
+  } 
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  .header, .footer{
+    height: 50px;
+    background: #666;
+    color: #fff;
+  }
+  .columns{
+    display: flex;
+    flex:1;
+  }
+  .main{
+    flex: 1;
+    background: #eee;
+  }
+  .sidebar-first{
+    width: 20%;
+    background: #ccc;
+    order: 1;
+  }
+  .sidebar-second{ 
+    width: 20%;
+    order: 3;
+    background: brown;
+  }
+ 

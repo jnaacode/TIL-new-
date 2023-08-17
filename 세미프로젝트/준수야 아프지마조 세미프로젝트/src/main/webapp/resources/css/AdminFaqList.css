@@ -1,0 +1,300 @@
+*{box-sizing: border-box;}
+/* div{border: 1px solid black;} */
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+} 
+
+*{
+    font-family: 'Pretendard-Regular';
+}
+
+#k-qList-content{ /* 전체 내용(header, footer 제외) */
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    padding: 20px 0;
+}
+
+.k-slide{
+    width: 25%;
+}
+
+.k-sidebar { /* 사이드바 */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    background-color: #f1f1f1;
+    margin-top: 100px;
+}
+
+.k-sidebar li a { /* 사이드바 각 리스트 */
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align: center;
+    background-color: rgba(178, 158, 135, 0.9);
+    transition-duration: 0.2s;
+}
+
+.k-sidebar li a:hover { /* 각 리스트 hover 효과 */
+    /* background-color: #555; */
+    background-color: #ebe7e3;
+    /* color: #fff; */
+    font-weight: bold;
+}
+
+.k-qna{ /* faq+질문게시판 전체 div */
+    margin: auto;
+    width: 75%;
+    min-height: 750px;
+}
+
+.k-qna>div:nth-of-type(1){  /* faq 글씨 */
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid gray;
+}
+
+.k-faq-slide{ /* 제목 부분 */
+    height: 40px;
+    line-height: 260%;
+    border-bottom: 1px solid gray;
+}
+
+
+.k-faq-slide:hover{ 
+    cursor: pointer;
+}
+
+
+.k-faq-slide>span{ /* 제목 글씨 부분 */
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+
+.k-arrow-img{ /* 이미지 클래스(직접 img 태그 주면 추가할 때 너무 귀찮을 거 같음) */
+    background-image: url("../images/arrow_down.png");
+    background-repeat: no-repeat;
+    background-position: 0px; /* 이미지 위치 설정 */
+    background-size: 20px;
+    height: 20px;
+    padding-left: 20px;
+    float: right;
+    transition-duration: 0.5s;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.k-faq-content{ /* faq 내용 */
+    display: none;
+    width: 890px;
+    height: 160px;
+    /* border: 3px solid #ddd; */
+    border-radius: 5px;
+}
+
+.k-faq-content>div{
+    height: 120px;
+    overflow: auto;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.k-qna>div:nth-child(3){ /* 질문게시판 글씨 */
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.k-qna>div:nth-child(4){
+    margin-bottom: 20px;
+}
+
+#q-btn{ /* 게시글 작성 버튼 */
+    display: block;
+    margin-left: auto;
+    width: 100px;
+    height: 40px;
+    border: 0;
+    background-color: rgb(173,158,135);
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#q-btn:hover{
+    background-color: #4F3A28;
+    color: white;
+}
+
+.k-q-list{ /* 목록 하나 하나  */
+    display: flex;
+    height: 50px;
+    border-bottom: 1px solid gray;
+}
+
+.k-q-list>div{ /* 목록 글씨 색깔 */
+    color: black;
+}
+
+.k-qna>div:nth-child(5)>a{ /* 목록 a태그 밑줄 */
+    text-decoration: none;
+}
+
+.k-q-list>div:nth-child(1){ /* 목록 번호 */
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.k-q-list>div:nth-child(2){ /* 게시글 제목 */
+    width: 450px;
+    display: flex;
+    /* padding-left: 20px; */ /* 패딩 줄까말까 */
+    align-items: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.k-q-list>div:nth-child(3){ /* 빈칸 */
+    width: 50px;
+}
+
+.k-q-list>div:nth-child(4){ /* 게시글 작성자 */
+    width: 130px;
+    display: flex;
+    align-items: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.k-q-list>div:nth-child(5){ /* 게시글 날짜 */
+    display: flex;
+    padding-left: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.k-pg{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.page-link{
+    color: black;
+}
+
+.page-link:hover{
+    color: black;
+    background-color: transparent;
+}
+
+/* 하단 검색 */
+
+.k-search-div{ /* 전체 */
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.k-search-div>div{
+    padding-left: 20px;
+}
+
+#k-search-btn{ /* 검색 버튼 */
+    color: white;
+    height: 30px;
+    width: 50px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgba(88, 69, 46, 0.9);
+}
+
+.k-search-div select{ /* select */
+    width: 100px;
+    height: 30px;
+}
+
+#k-search{ /* input */
+    display: block;
+    height: 30px;
+}
+
+.k-search-div>div:nth-child(2){
+    position: relative;
+}
+.k-search-div>div:nth-child(2)>input{
+    padding-left: 30px;
+}
+
+.k-search-div>div:nth-child(3)>img{
+    width: 18px;
+}
+
+.k-search-div>div:nth-child(3){
+    position: absolute;
+    top: 15%;
+    left: 39%;
+}
+
+
+/* 관리자 추가 */
+.k-btns{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: right;
+}
+
+.k-btns button{ /* 버튼들 */
+    margin-right: 10px;
+    background-color: rgba(88, 69, 46, 0.9);
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    width: 60px;
+    height: 30px;
+}
+
+
+.k-faq-content>div{
+    overflow-y: scroll;
+    height: 120px;
+
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+
+.k-faq-content>div::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+}
+
+.K-none{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    font-weight: bold;
+
+}

@@ -1,0 +1,184 @@
+*{
+    box-sizing: border-box;
+    font-family: 'NanumSquareNeo-Variable';
+}
+
+@font-face { /* 폰트 */
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*-------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------*/
+
+
+
+/*-------------------------------------------------------------------------------*/
+.C-body{ /* 바디 전체를 감싸는 div */
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.C-Final-rsv{ /* 예약하기를 감싸는 div */
+    width: 1150px;
+    height: 800px;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+}
+
+.C-body-first-div{ /* 예약하기 글씨 부분 */
+    width: 100%;
+    height: 80px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    background-color: rgba(178, 158, 135, 0.9);
+}
+
+.C-body-rsvInfo{ /* 예약자 정보 , 결제 정보 큰 틀*/
+    width: 100%;
+    height: 400px;
+    display: flex;
+}
+.C-rsvInfo{ /* table태그의 큰 틀 */
+    width: 50%;
+    padding: 15px 10px;
+    text-align: center;
+    border-right: 1px solid #eee;
+}
+.C-rsvInfo-table{ /* 예약자 정보부분 테이블 */
+    margin-left: 30px;
+}
+tr > td:nth-child(2){
+    padding: 8px;
+}
+
+tr > td{ /* input태그 줄 맞추기 */
+    text-align: left;
+}
+td > input{ /* input태그의 value들 글씨 붙이기 */
+    letter-spacing: -1px;
+}
+
+.C-moneyAll{ /* 결제정보 + 요금안내 큰 틀 */
+    width: 50%;
+    height: 100%;
+}
+#C-accountName{ /* 입금자명 input */
+    width: 180px;
+}
+
+
+
+#C-hotelPay{ /* 객실요금 input */
+    width: 180px;
+}
+
+#C-couponPay{/* 할인요금 input */
+    width: 180px;
+}
+
+.C-moneyInfo{ /* 결제정보 틀*/
+    height: 50%;
+    padding-top: 15px;
+}
+
+#C-display-change{ /* 입금계좌 display */
+    display: none;
+}
+
+#C-display-change2{ /* 입금자명 display */
+    display: none;
+}
+.C-payInfo{ /* 요금안내 틀*/
+    height: 50%;
+    padding-top: 15px;
+}
+
+.Iwantgohome{/* 결제 금액 글씨 부분 */
+    padding: 9px;
+}
+
+#C-finalpay{/* 결제금액 input창 */
+    width: 170px;
+}
+
+.C-moneyInfo-table{ /* 예약자 정보부분 테이블 */
+    margin-left: 30px;
+}
+
+.C-payInfo-table{ /* 요금 안내 부분 테이블 */
+    margin-left: 30px;
+}
+
+.C-rsv-agree{ /* 이용약관 동의 큰 틀 */
+    margin-left: 50px;
+    height: 200px;
+    padding-top: 40px;
+}
+#C-rsvagree{/* 이용안내 동의 틀 */
+    resize: none;
+    width: 750px;
+}
+
+#C-rsvOrder{/* 이용안내 틀 */
+    resize: none;
+    height: 100px;
+    width: 480px;
+}
+
+#C-rsvAddress{ /* 주소 input창 */
+    width: 380px;
+    letter-spacing: -1px;
+}
+
+.C-rsv-bottom-btn{ /* 이전으로 + 예약완료 버튼 큰 틀 */
+    text-align: center;
+}
+
+#C-rsvBeforeBtn{ /* 이전으로 버튼 */
+    margin-right: 30px;
+    height: 40px;
+    border: none;
+    background-color: rgb(173,158,135);
+    color: white;    
+    border-radius: 10px;
+}
+#C-rsvBeforeBtn > a{ /* 이전으로 */
+    color:white;
+}
+
+#C-rsvClearBtn{ /* 예약완료 버튼 */
+    margin-left: 30px;
+    height: 40px;
+    border: none;
+    background-color: rgb(173,158,135);
+    color: white;
+    border-radius: 10px;
+}
+
+#C-rsvClearBtn:hover{
+    background-color: #4F3A28;
+    transition-duration: 0.3s;
+}
+
+#C-rsvBeforeBtn:hover{
+    background-color: #4F3A28;
+    transition-duration: 0.3s;
+}
+
+/*-------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------*/

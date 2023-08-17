@@ -1,0 +1,173 @@
+*{
+    box-sizing: border-box;
+
+      /*  border: 1px solid black;  */ 
+
+}
+
+input{
+    border: none;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+} 
+
+*{
+    font-family: 'Pretendard-Regular';
+}
+
+.accordion-header > button{
+
+    background-color:burlywood;
+    
+    color:white;
+
+
+}
+
+#J-btn{
+
+    height: 30px;
+    width: 80px;
+    margin-left: 250px;
+    border-radius: 5px;
+    background-color: rgb(173,158,135);
+    border: 0.5px solid gray;
+}
+
+#J-btn:hover{
+    background-color:#4F3A28;
+    border: 1px solid black;
+}
+
+
+
+.J-header{
+    height: 120px;
+}
+
+.J-BODY{
+
+    margin: auto;
+    width: 1200px;
+    height: 1000px;
+    display: flex;
+    padding: 50px;
+}
+
+
+.J-BODY3{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+}
+
+.J-J{
+
+    width: 85%;
+    height: 90%;
+    border: 0.5px solid grey;
+    border-radius: 10px;
+    
+}
+
+.J-side{
+    width: 25%;
+}
+
+.J-J1{
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 0.5px solid gray;
+    border-radius: 10px;
+}
+
+.J-J2{
+    height: 80%;
+   
+}
+
+.J-J3{
+    height: 10%;
+    border-top: 0.5px solid gray;
+    border-radius: 10px;
+}
+
+.J-room-text {
+    width: 280px;
+    overflow: none;
+}
+
+pre{
+    overflow-x: none;
+}
+
+img{
+
+    height: 90%;
+    width: 100%;
+    
+}
+
+.accordion-body {
+
+display: flex;
+align-items: center;
+
+}
+
+.J-PIC{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.J-text{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.J-text > input{
+    height: 40px;
+    width: 200px;
+    margin-left: 20px;
+}
+
+.accordion-body{
+    
+    height: 300px;
+    
+}
+
+#J-body{
+
+    overflow: scroll;
+}
+
+input{
+    outline: none;
+}
+
+#J-body > div{
+
+    text-align: center;
+
+}
+
+   
+
+
+

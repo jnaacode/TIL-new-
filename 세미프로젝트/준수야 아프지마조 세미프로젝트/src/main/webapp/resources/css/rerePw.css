@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Pretendard-Regular';
+    /* border: 1px solid black; */
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+} 
+
+/* 제일 큰 div */
+.L-all{
+    display: flex;
+    width: 1200px;
+    margin: auto;
+}
+
+
+/* 메인 */
+.L-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #eee;
+    margin: auto;
+}
+
+/* 제목 */
+.L-title {
+    width: 820px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 50px;
+
+    background-color: rgba(178, 158, 135, 0.9);
+    color: white;
+}
+
+/* 비밀번호 변경 */
+.L-form-pw{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* 변경 input 태그 */
+.L-pw{
+    display: flex;
+    width: 820px;
+    margin: auto;
+    height: 50px;
+    border: 2px solid #ddd;
+    margin-bottom: 10px;
+}
+.L-pw-2{
+    display: flex;
+    width: 820px;
+    margin: auto;
+    height: 50px;
+    border: 2px solid #ddd;
+}
+
+.L-pw > label{
+    width: 30%;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    border-right: 2px solid #ddd;
+    
+}
+.L-pw-2 > label{
+    width: 30%;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    border-right: 2px solid #ddd;
+    
+}
+
+.L-pw > input{
+    width: 70%;
+    outline: none;
+    border: 0;
+}
+.L-pw-2 > input{
+    width: 70%;
+    outline: none;
+    border: 0;
+}
+
+/* 버튼 */
+.L-pw-btn{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(173,158,135);
+    color: white;
+    border: none;
+    margin-bottom: 50px;
+}
+
+.L-pw-btn:hover{
+    background-color: #4F3A28;
+}
+/* 유효성 검사용 div */
+#k-validate{
+    padding-top: 0px;
+}
+
+.k-confirm{
+    color: green;
+}
+
+.k-error{
+    color: red;
+}
+
+input[name=memberId]{
+    background-color: pink;
+    opacity: 0
+}

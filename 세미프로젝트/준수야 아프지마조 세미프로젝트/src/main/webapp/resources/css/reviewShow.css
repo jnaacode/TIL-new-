@@ -1,0 +1,457 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Pretendard-Regular';
+}
+
+.P-top {
+    display: flex;
+    margin: auto;
+    width: 1200px;
+    position: relative;
+    padding: 50px 0;
+}
+
+.P-maindisplay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    border: 1px solid #eee;
+    width: 100%;
+}
+
+.P-main {
+    width: 820px;
+}
+
+.P-reviewTitle {
+    width: 100%;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 50px;
+
+    background-color: rgba(178, 158, 135, 0.9);
+    color: white;
+}
+
+/* 드롭박스 */
+#P-dropdown {
+    display: flex;
+    justify-content: right;
+    padding: 30px;
+    font-size: 16px;
+}
+
+#P-dropdown>select:nth-child(1) {
+    margin: 0 30px;
+    width: 120px;
+}
+
+#P-dropdown>select:nth-child(2) {
+    width: 120px;
+}
+
+/* 리뷰/별점 크기 */
+.P-reviewBox {
+    width: 98%;
+    margin: 50px auto;
+    border: 1px solid #eee;
+
+
+}
+
+#P-id >span{
+    padding: 0 4px;
+}
+
+.P-profile_area>div:nth-child(1) {
+    display: flex;
+    padding: 5px 10px;
+}
+
+.P-profile_area>div:nth-child(2) {
+    display: flex;
+    padding: 0 10px;
+}
+
+.P-profile_area div:nth-child(3) {
+    display: flex;
+   justify-content: flex-end;
+    width: 100%;
+}
+
+.P-room1{
+    width: 30%;
+}
+
+.P-room2{
+    width: 30%;
+}
+
+
+/* 이미지 */
+.P-img {
+    width: 750px;
+    height: 150px;
+    margin: auto;
+    margin: 10px;
+}
+
+
+/* 별점 */
+
+.P-star{
+    display: flex;
+    margin-top: 15px;
+}
+
+#P-myform {
+    margin: auto 10px;
+}
+
+#P-myform fieldset {
+    display: inline-block;
+    /* 하위 별점 이미지들이 있는 영역만 자리를 차지함.*/
+    direction: rtl;
+    /* 이모지 순서 반전 */
+    border: 0;
+    /* 필드셋 테두리 제거 */
+}
+
+.PreviewImg{
+    max-height: 90%;
+    border: 1px solid black;
+    
+}
+
+
+#P-myform input[type=radio] {
+    display: none;
+    /* 라디오박스 감춤 */
+}
+
+.P-myformYellow{
+    font-size: 2em;
+    /* 이모지 크기 */
+    color: transparent;
+    /* 기존 이모지 컬러 제거 */
+    text-shadow: 0 0 0 #f0f0f0;
+    /* 새 이모지 색상 부여 */
+    user-select: none; /* Disable text selection for the labels */
+    -webkit-user-drag: none; 
+    
+
+}
+
+.pyellow{
+    text-shadow: 0 0 0 rgba(250, 208, 0, 0.99);
+    font-size: 2em;
+    
+    
+}
+
+
+
+  .star-rating input {
+    display: none;
+  }
+   
+  #myform fieldset legend{
+    text-align: right;
+}
+
+
+
+
+ .tagClass{
+     width: 500px;
+     margin: 15px 0;
+     height: 100px;
+ }
+
+ .tagClass1{
+    flex-wrap: wrap;
+    width: 500px;
+}
+
+
+
+  /* 태그 */
+.P-tag-top1{
+    border-radius: 15px;
+    background-color: #eee;
+    margin:1px 5px;
+    padding: 5px;
+    border: 0;
+}
+
+.P-tag-top2{
+    border-radius: 15px;
+    background-color: #eee;
+    margin:1px 5px;
+    padding: 5px;
+    visibility: hidden;
+    
+}
+
+.P-tag-area{
+    display: flex;
+}
+
+.P-tag-area>span{
+    text-align: center;
+}
+
+.P-tag-top1 > input{
+    display: inline-block;
+    border: 0;
+    text-align: center;
+    margin-top: 15px;
+    
+}
+
+
+
+.P-tag-top2 > input{
+    display: inline-block;
+    border: 0;
+    text-align: center;
+    margin-top: 15px;
+
+}
+
+.P-tag-top1>img {
+    width: 18px;
+    height: 18px;
+}
+
+.P-tag-con > input{
+    margin: auto 5px; 
+    padding: 0 3px;
+    border-radius: 4px;
+    background-color: #eee;
+    text-decoration: none;
+    border: 0;
+}
+
+.P-rs-btn{
+    display: flex;
+    justify-content: right;
+    margin: 20px;
+}
+
+#P-rs-update-btn{
+    margin: 5px 5px;
+    cursor: pointer;
+    background-color: rgb(173,158,135);
+    color: white;
+    width: 50px;
+    border-radius: 15px;
+    border:0;
+    height: 40px;
+}
+
+#P-rs-update-btn:hover{
+    background-color: #4F3A28;
+    color: white;
+}
+
+#P-rs-delete-btn{
+    margin: 5px 5px;
+    cursor: pointer;
+    background-color: rgb(173,158,135);
+    color: white;
+    width: 50px;
+    border-radius: 15px;
+    height: 40px;
+    border:0
+}
+
+#P-rs-delete-btn:hover{
+    background-color: #4F3A28;
+    color: white;
+}
+
+#P-rs-Declar-btn{
+    margin: 5px 5px;
+    cursor: pointer;
+    background-color: rgb(173,158,135);
+    color: white;
+    width: 50px;
+    border-radius: 15px;
+    border:0
+}
+
+#P-rs-Declar-btn:hover{
+    background-color: #4F3A28;
+    color: white;
+}
+
+
+#P-rs-content{
+    width: 750px;
+    height: 150px;
+    margin: auto;
+    border: 1px solid gainsboro;
+    margin: 10px;
+    overflow-y: scroll;
+}
+
+.P-blank{
+    padding: 20px;
+}
+
+.P-pg{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px; 
+}
+
+.showstep1{
+    max-height: 300px;
+    overflow: hidden;
+}
+.showstep2{
+    max-height: 600px;
+    overflow: hidden;
+}
+.content{
+    height: 1000px;
+    background-color: #a00;
+}
+.hide{
+    display: none;
+}
+
+#search{
+    display: none;
+}
+
+/* 신고하기 팝업창 */
+
+/* 신고하기 전체 창 */
+#P-popup-Declar{
+    width: 500px;
+    height: 500px;
+    border: 3px solid rgb(173,158,135);
+    position: absolute;
+    top: 280px;
+    left: 350px;
+    background-color: white;
+    display: none;
+
+}
+
+#P-popup-area{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#P-popup-title{
+    margin: 15px 0px 15px 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#P-popup-outbtn{
+    margin: auto;
+    border: 0;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+#P-popup-outbtn:hover{
+    color: rgb(173,158,135);
+}
+
+#P-popup-out{
+    display: flex;
+    margin-left: 150px;
+    position: absolute;
+    right: 45px;
+    top: 15px;
+    
+
+}
+
+.P-popup-writer-area{
+    display: flex;
+    justify-content: center;
+}
+
+#P-declar-btn{
+    margin: auto;
+    cursor: pointer;
+    background-color: rgb(173,158,135);
+    color: white;
+    border-radius: 15px;
+    border:0;
+    font-size: 15px;
+    width: 150px;
+    height: 30px;
+    
+}
+
+/* 신고하기 입력 창 */
+#P-popup-content{
+    resize:none;
+    width: 400px;
+    height: 380px;
+}
+
+.P-declar-btnarea{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
+/* 페이지네이션 */
+.c-coupon-page{
+    height: 200px;
+    margin-top: 20px;
+}
+.c-pagination{ /* ul태그 */
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+}
+
+.c-pagination>li{
+    width: 20px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.c-pagination a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: black;
+    /* letter-spacing: -2px; */
+}
+
+/* 현재 페이지 번호 */
+.c-pagination .c-current{
+    background-color: rgba(178, 158, 135, 0.9);
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+}
+

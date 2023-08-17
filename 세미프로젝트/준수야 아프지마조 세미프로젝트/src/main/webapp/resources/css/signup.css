@@ -1,0 +1,389 @@
+*{box-sizing: border-box;
+ 
+         /* border: 1px solid black;  */ 
+ 
+}
+
+input{
+     border: 0.5px solid grey;
+     outline: none; 
+}
+
+.J-1{
+    
+    height: 120px;
+}
+
+.J-2{
+
+    height: 2200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 1400px;
+    
+    
+}
+
+button{
+    border: none;
+}
+
+button:hover{
+    border: none;
+    border: 1px solid black;
+}
+
+.J2-1{
+    margin: auto;
+    background-color:#F1E3C4;
+    width: 1200px;
+    height: 95%;
+}
+
+
+
+.J2-2{ 
+    height: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.J2-3{
+    height: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.J2-3 > input{
+
+    border-radius: 5px;
+    width: 361px;
+    height: 62%;
+    margin-left: 174px;
+}
+
+.J2-4{ 
+    height: 47%;
+    display: flex;
+    
+}
+
+.J2-5{ height: 40%;}
+
+.J2-6 {height: 5%;}
+
+.J2-4-1 {
+    width: 40%;
+}
+.J2-4-2 {
+    width: 60%;
+}
+
+#J2-4-1{
+    height: 87.7%;
+    display: flex;
+}
+#J2-4-2{
+
+    height: 12.3%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#J2-4-2 > input{
+
+    margin: 5px;
+    
+}
+
+#J2-4-3 {
+    height: 50%;
+    display: flex;
+
+    align-items: center;
+}
+
+
+#J2-4-4 {
+    height: 50%;
+    display: flex;
+
+    align-items: center;
+}
+
+
+#J2-4-3 > input:nth-child(2){
+
+    margin-left: 5px;
+    width: 99px;
+    height: 37px;
+    border-radius: 5px;
+    background-color:rgb(173,158,135);
+    border: 0.5px solid gray;
+}
+
+#J2-4-3 > input:nth-child(2):hover{
+    background-color:#4F3A28;
+    cursor: pointer;
+    border: 1px solid black;
+    color: white;
+}
+
+
+
+#J2-4-3 > input:nth-child(1){
+    
+    margin-left: 26px;
+    border-radius: 5px;
+    width: 25%;
+    height: 67%;
+}
+
+#J2-4-4 > input:nth-child(1){
+    
+    margin-left: 26px;
+    border-radius: 5px;
+    width: 50%;
+    height: 67%;
+}
+
+#J2-4-1 > div:nth-child(1){width: 45%; }
+#J2-4-1 > div:nth-child(2){ width: 55%;}
+
+.J-J1 > div{
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    
+}
+
+.J-J2 > div{
+    width: 240px;
+    height: 25px;
+    text-align: center;
+    
+}
+.J-J3 {
+    flex-direction: column;
+}
+.J-J3 > div{
+    width: 240px;
+    height: 25px;
+    text-align: center;
+    
+}
+
+.J-J1 > input{
+    margin-top: 25px;
+}
+
+.J-J2 > input{
+    margin-top: 25px;
+}
+
+.J-J3 > input{
+    margin-top: 25px;
+}
+
+.J-J1 {
+    height: 14.2%;
+    flex-direction: column;
+}
+.J-J2 {
+    height: 14.2%;
+    flex-direction: column;
+}
+.J-J3 {
+    height: 14.2%;
+}
+.J-J4 {
+    height: 14.2%;
+}
+.J-J5 {
+    height: 14.2%;
+}
+.J-J6 {
+    height: 14.2%;
+}
+.J-J7 {
+    height: 14.2%;
+}
+
+
+.J-H button {
+    border-radius: 3px;
+    height: 30px;
+    width: 150px;
+}
+
+.J-H button:hover { 
+    cursor: pointer;
+    color: white;
+}
+
+.J-H1 {    
+    height: 14.2%;
+}
+.J-H2 {
+    height: 14.2%;
+}
+.J-H3 {
+    height: 14.2%;
+}
+.J-H4 {
+    height: 14.2%;
+}
+.J-H5 {
+    height: 14.2%;
+}
+.J-H6 {
+    height: 14.2%;
+}
+.J-H7 {
+    height: 14.2%;
+}
+
+
+
+#J-A{
+    height: 12.5%;
+    font-weight: bold;
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+    margin-left: 220px;
+}
+
+#J-B{
+    width: 85%;
+    height: 35%;
+    border-radius: 5px;
+    
+}
+
+#J-C{
+    width: 41%;
+    height: 30%;
+    border-radius: 5px;
+
+}
+
+.J-J > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.J-H > div{
+    display: flex;
+    align-items: center;
+}
+
+#J-text1{
+
+    height: 40%;
+}
+
+#J-text2{
+    height: 30%;
+}
+
+.J2-5 > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#J-check1{ 
+    overflow: auto;
+    
+}
+
+.J-check2{
+    margin: 15px;
+}
+
+.J2-5-1 > pre{ 
+
+    margin-top: 30px;
+}
+
+
+.J2-5-0{ height: 5%;}
+
+.J2-5-1{ height: 5%;}
+
+.J2-5-2{ height: 40%;}
+
+
+.J2-5-3{ height: 10%;}
+
+.J2-5-4{ height: 5%;}
+
+.J2-5-5{  height: 30%;}
+
+.J2-5-6{ height: 10%;}
+
+textarea{ color: gray;}
+
+ @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+} 
+
+*{
+    font-family: 'Pretendard-Regular';
+}
+
+.J-H1-1{
+    background-color:rgb(173,158,135);
+}
+
+.J-H1-1:hover{
+    background-color:#4F3A28;
+    color: white;
+}
+
+.J-H7-1{
+    height: 25px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.J2-6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.J2-6 > button{
+    background-color:rgb(173,158,135);
+    margin: 10px;
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.J2-6 > button:hover{
+    background-color:#4F3A28;
+    cursor: pointer;
+    color: white;
+}
+
+.J-H7-1 > option:nth-child(1){
+    color: gray;
+}
+
+
+
+
+

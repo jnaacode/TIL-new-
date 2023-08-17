@@ -1,0 +1,268 @@
+*{box-sizing: border-box;}
+
+/* div{border: 1px solid black;} */
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+} 
+
+*{
+    font-family: 'Pretendard-Regular';
+}
+
+
+.K-all{ /* 전체 */
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    padding: 50px 0;
+    
+}
+
+.L-main{
+    width: 700px;
+}
+
+.K-content{ /* 찐 내용 */
+    background-color: #ebe7e3 ;
+    margin: auto;
+    width: 100%;
+    border: 1px solid rgba(178, 158, 135, 0.9);
+}
+
+.K-content>div:nth-child(1){ /* 회원정보확인 글씨 */
+    margin-left: 20px;
+    height: 50px;
+    line-height: 200%;
+    font-size: 25px;
+    font-weight: bold;
+    border-bottom: lightgray;
+}
+.K-content>div:nth-child(2){ /* 회원님의 정보를 ~ 글씨 */
+    margin-left: 20px;
+    height: 30px;
+    line-height: 200%;
+    font-size: 15px;
+    font-weight: bold;
+}
+.K-content>div:nth-child(3){ /* 실제 내용 들어갈 div */
+    margin: auto;
+    height: 600px;
+    width: 650px;
+    background-color: white;
+}
+
+.K-content table{ /* 개인정보 담겨있는 테이블 */
+    margin: 10px 0px 50px 30px;
+    padding-top: 30px;
+    
+}
+
+.K-content td{ /* 각 행 */
+    font-size: 20px;
+    padding-top: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.K-content tr>td:nth-child(1){ /* 첫 번째 열에만 width 지정(간격 조정 위해) */
+    width: 150px;
+}
+
+.K-agree{ /* 약관 동의 */
+    padding-left: 30px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.K-agree>div:nth-child(2){ /* 버튼 맨 오른쪽으로 옮기기 */
+    margin-left: auto;
+    margin-top: auto;
+}
+
+.K-agree span:nth-of-type(2){
+    border-bottom: 1px solid lightgray;
+}
+
+.K-agree-btn{ /* 버튼 속성(마케팅 약관) */
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(173,158,135);
+    cursor: pointer;
+    border: 0;
+    margin-right: 80px;
+    width: 65px;
+    font-size: 0.8em;
+}
+
+.K-agree-btn:hover{
+    background-color: #4F3A28;
+    color: white;
+}
+.K-agree-btn1:hover{
+    background-color: #4F3A28;
+    color: white;
+}
+.K-agree-btn1{ /* 버튼 속성(제3자 약관) */
+    margin-right: 80px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(173,158,135);
+    cursor: pointer;
+    border: 0;
+    width: 65px;
+    font-size: 0.8em;
+}
+
+.K-agree-confirm{ /* 라디오 버튼들 div */
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+
+/* 팝업 관련 스타일 */
+.K-popup{ /* 팝업 열렸을 때 뒷배경 살짝 어둡게 */
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
+
+.K-pop{ /* 팝업 스타일(마케팅) */
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    background-color: white;
+    border: 1px solid gray;
+    z-index: 1000;
+    display: none;
+}
+.K-pop1{ /* 팝업 스타일(제3자) */
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    background-color: white;
+    border: 1px solid gray;
+    z-index: 1000;
+    display: none;
+}
+
+.K-pop>div:nth-child(1){ /* X버튼이 항상 위에 붙어있게 */
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #ebe7e3;
+}
+.K-pop1>div:nth-child(1){ /* X버튼이 항상 위에 붙어있게 */
+    background-color: #ebe7e3;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.K-pop-btn{ /* X버튼 스타일 */
+    border: 0;
+    background: #ebe7e3;
+    border-radius: 3px;
+}
+
+.K-pop-btn:hover{
+    background-color: gray;
+}
+
+.K-pop::-webkit-scrollbar { /*  팝업창 스크롤 없애기 */
+    display: none;
+}
+.K-pop1::-webkit-scrollbar { /*  팝업창 스크롤 없애기 */
+    display: none;
+}
+
+
+/* 개인정보 수정 버튼 */
+.K-content>div:nth-child(4){
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#K-update-btn{
+    width: 120px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(173,158,135);
+    font-size: 15px;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+
+}
+
+#K-update-btn:hover{
+    background-color: #4F3A28;
+    color: white;
+}
+
+/****** 회원 정보 수정 css *******/
+
+/* input 태그 스타일 */
+.L-input{
+    width: 220px;
+    font-size: 16px;
+    outline: 0;
+    border: 0;
+    color: gray;
+}
+
+/* 우편번호 검색 버튼 */
+.L-searchBtn{
+    width: 130px;
+    height: auto;
+    font-size: 0.8em;
+}
+
+/* 주소 밑줄 삭제 */
+td[name="L-addressTd"]{
+    border: 0;
+}
+
+/* 폼태그 */
+.L-form{
+    margin: auto;
+}
+
+/* 수정할 주소, 상세주소 인풋창 크기 늘리기 */
+#L-address2{
+    width: 100%;
+}
+
+#L-address3{
+    width: 100%;
+}

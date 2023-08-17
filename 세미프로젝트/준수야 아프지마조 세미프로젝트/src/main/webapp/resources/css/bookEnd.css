@@ -1,0 +1,119 @@
+*{box-sizing: border-box;}
+
+/* div{border: 1px solid black;} */
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+} 
+
+*{
+    font-family: 'Pretendard-Regular';
+}
+
+
+#k-content{ /* 전체 내용 div */
+    width: 1200px;
+    margin: auto;
+}
+
+#k-content>div:nth-child(1){ /* 예약 확인 div */
+    height: 120px;
+    font-weight: bold;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid gray;
+}
+
+#k-content>div:nth-child(2){ /* 예약정보객실 + 테이블 div */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#k-content>div:nth-child(2)>div:nth-child(1){ /* 예약정보 객실 글씨 */
+   font-weight: bold;
+   font-size: 25px;
+   margin-bottom: 20px;
+   margin-top: 20px;
+}
+
+#k-book-inform th{
+    width: 200px; /* 1160/7하기 귀찮아서 대충.. */
+    height: 40px;
+    background-color: rgb(202, 193, 193);
+    padding-left: 10px;
+    border: 1px solid gray;
+}
+#k-book-inform td{
+    padding-left: 10px;
+    height: 40px;
+    border: 1px solid gray;
+}
+
+#k-content>div:nth-child(3){ /* 예약자정보 + 테이블 div */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#k-content>div:nth-child(3)>div:nth-child(1){ /* 예약자정보 글씨 */
+    margin-top: 120px;
+    font-weight: bold;
+    font-size: 25px
+}
+
+#k-booker-inform th{
+    width: 300px;
+    height: 40px;
+    background-color: rgb(202, 193, 193);
+    padding-left: 10px;
+    border: 1px solid gray;
+}
+#k-booker-inform td{
+    padding-left: 10px;
+    width: 860px;
+    height: 40px;
+    border: 1px solid gray;
+}
+
+#k-content>div:nth-child(4){ /* 버튼 div */
+    margin-top: 50px;
+}
+
+#k-book-to-main{ /* 버튼 */
+    display: block;
+    margin: auto;
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: rgb(173,158,135);
+    cursor: pointer;
+    border: 0;
+    margin-bottom: 20px;
+}
+
+#k-book-to-main:hover{
+    background-color: #4F3A28;
+}
+
+/* #k-content table{
+    border-collapse: collapse;
+} */
+
+#k-book-to-main>a{
+    text-decoration: none;
+    color: black;
+    width: 120px;
+    height: 40px;
+    display: block;
+    padding-right: 12px;
+    padding-top: 5px;
+}
+
+#k-book-to-main>a:hover{
+    color: white;
+}

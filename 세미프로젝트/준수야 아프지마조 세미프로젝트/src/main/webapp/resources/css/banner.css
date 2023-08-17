@@ -1,0 +1,87 @@
+/* div{border: 1px solid black}; */
+
+*{ box-sizing: border-box;}
+
+.L-slide{
+    list-style-type:none;
+}
+
+.L-banner{
+    width: 100%;
+    height: 650px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: auto;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.L-slide {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    padding: 0;
+    margin: 0 0 0 -960px;
+    width: 1920px;
+    height: 650px;
+    display: flex;
+    list-style-type:none;
+    overflow: hidden;
+}
+
+.L-controller{
+    width: 1200px;
+    height: 650px;
+    position: relative;
+    
+}
+
+.L-controller > span{
+    display: block;
+}
+
+.L-controller span:hover {
+    background-color: rgba(128, 128, 128, 0.4);
+}
+
+.L-prev {
+    left: 10px;
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    
+    border-radius: 50%;
+    padding: 5px 25px 10px 20px;
+    top: 50%;
+    font-size: 35px;
+    cursor: pointer;
+} 
+
+.L-prev:hover {
+    transform: translateX(-10px);
+}
+
+.L-next {
+    right: 10px;
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    
+    border-radius: 50%;
+    padding: 5px 20px 10px 25px;
+    top: 50%;
+    font-size: 35px;
+    cursor: pointer;
+} 
+
+.L-next:hover {
+    transform: translateX(10px);
+}

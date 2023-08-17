@@ -1,0 +1,148 @@
+*{box-sizing: border-box;}
+body{margin: 0; padding: 0;}
+
+div a{
+    text-decoration: none;
+}
+
+/* div{border: 1px solid black;} */
+
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Pretendard-Regular';
+}
+
+
+/* 전체 */
+.P-container{
+    background-color: #F1E3C4;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    opacity: 0.7;
+    backdrop-filter: blur(30px);
+  
+    
+}
+
+.P-header_middle > img{
+    width: 200px;
+    margin-top: 10px;
+}
+
+
+
+/* 가운데header */
+.P-header{
+    display: flex;
+    height: 120px;
+    width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+    background-color: #F1E3C4;
+    
+
+}
+
+/* 왼쪽 상단 빈칸 */
+.P-blank{
+    padding: 5px 150px;
+    height: 50%;
+    width: 30%;
+
+}
+
+/* 호텔찾기/예약 */
+.P-btn1{
+    height: 50%;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: bold;
+   
+
+}
+.P-btn1>a:nth-child(1):after{
+    display:block;
+    content: '';
+    border-bottom: solid 3px rgba(131, 105, 75, 0.72);  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+
+.P-btn1>a:nth-child(1):hover:after{ transform: scaleX(1); }
+.P-btn1>a:nth-child(1):hover{color: black;}   
+.P-btn1>a:nth-child(2):after{
+    display:block;
+    content: '';
+    border-bottom: solid 3px rgba(131, 105, 75, 0.72);  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+
+.P-btn1>a:nth-child(2):hover:after{ transform: scaleX(1); }
+.P-btn1>a:nth-child(2):hover  {color: black;}
+.P-btn1>a{color: black;}
+
+/* 로그인 nav */
+.P-btn2{
+    font-size: 13px;
+    padding: 25px;
+    height: 50%;
+    display: block;
+    justify-content: right;
+    padding-left: 0;
+    margin-left: 50px;
+
+}
+
+.P-btn2 span{
+    padding: 0 10px;
+}
+
+.P-btn2>ul a{color: black;} 
+
+/* 커뮤니티 / 이벤트 */
+.P-btn3{
+    height: 50%;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform:uppercase;
+    width: 300px;
+    
+}
+
+.P-btn3>a{color: black;}
+
+.P-btn3>a:nth-child(1):after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px rgba(131, 105, 75, 0.72);  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+.P-btn3>a:nth-child(1):hover:after{ transform: scaleX(1); }
+.P-btn3>a:nth-child(1):hover {color: black;}
+.P-btn3>a:nth-child(2):after{
+    display:block;
+    content: '';
+    border-bottom: solid 3px rgba(131, 105, 75, 0.72);  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+.P-btn3>a:nth-child(2):hover:after{ transform: scaleX(1); }
+.P-btn3>a:nth-child(2):hover{color: black;}

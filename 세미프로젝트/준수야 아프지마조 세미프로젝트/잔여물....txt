@@ -1,0 +1,52 @@
+// 상세게시글로 다시 넘길떄 필요한 아이
+		int type = Integer.parseInt(req.getParameter("type"));
+		int cp = Integer.parseInt(req.getParameter("cp"));
+		int boardNo = Integer.parseInt(req.getParameter("no"));
+		
+		// update시 필요한 놈들
+		String boardTitle = req.getParameter("boardTitle");
+		String boardContent = req.getParameter("boardContent");
+		String boardDate = req.getParameter("boardDate");
+		// String memberNo = req.getParameter("memberNo");
+		
+		
+		// 주소 저장 
+		String path = null;
+		
+		// 서비스 
+		CBookService service = new CBookService();
+		
+		// 객체 생성
+		Board board = new Board();
+		
+		// 세션 부여
+		HttpSession session = req.getSession();
+		
+		board.setBoardNo(boardNo);
+		board.setBoardTitle(boardTitle);
+		board.setBoardContent(boardContent);
+		board.setBoardDate(boardDate);
+		board.setMemberNo(boardNo);
+		
+		try {
+			
+			int result = service.updateBoard(board,type);
+			
+			if(result > 0) {
+				session.setAttribute("message", "게시글이 수정되었습니다.");
+				
+				path ="boardDetail?type="+ type + "&cp=" + cp + "&no=" + boardNo;
+				
+			boardDetail?type=2&cp=1&no=26
+
+			}else {
+				session.setAttribute("message", "게시글 수정 실패");
+				
+				path ="boardDetail?type="+ type + "&cp=" + cp + "&no=" + boardNo;
+			}
+			
+			resp.sendRedirect(path); 
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}

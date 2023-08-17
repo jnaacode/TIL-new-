@@ -1,0 +1,333 @@
+*{box-sizing: border-box;}
+body{margin: 0; padding: 0;}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+} 
+
+*{
+    font-family: 'Pretendard-Regular';
+}
+
+div a{
+    text-decoration: none;
+}
+
+
+
+*{box-sizing: border-box;}
+
+/* div{border: 1px solid black;} */
+
+
+input{
+    border-radius: 5px;
+    border: 0;
+}
+
+input:focus{
+    outline: 0;
+}
+
+button{
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover{
+    font-weight: bold;
+}
+
+.k-content{
+    width: 100%;
+    position: relative;
+    height: 660px;
+}
+
+.k-content>div:nth-child(1){ /* 첫 번째 빈칸 */
+    height: 80px;
+}
+
+.k-content>div:nth-child(4){ /* 두 번째 빈칸 */
+    height: 120px;
+}
+
+#k-login{
+    width: 100%;
+}
+
+#k-login-letter{ /* 로그인 영역 글씨부분 */
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    border-bottom: 1px solid lightgray;
+}
+
+#k-login>div{ /* 로그인 입력창 */
+    height: 350px;
+    width: 800px;
+    margin: auto;
+    /* background-color: rgba(178, 158, 135, 0.9); */
+    border: 5px solid rgba(178, 158, 135, 0.5);
+    border-radius: 10px;
+}
+
+#k-login-input{
+    margin-top: 30px;
+}
+
+#k-login-input>table{ /* 아이디, 비밀번호 입력창, 로그인 버튼 */
+    margin: auto;
+    margin-top: 60px;
+}
+
+#k-login-input tr:nth-child(1){ /* 아이디 행 */
+    height: 40px;
+    font-weight: bold;
+}
+
+#k-login-input tr>td:nth-child(2){
+    border-bottom: 1px solid lightgray;
+    transition-duration: 0.1s;
+
+}
+
+#k-login-input tr>td:nth-child(2):hover{ /* 입력창 hover 효과 */
+    border-bottom: 3px solid rgba(178, 158, 135, 0.9);
+}
+
+#k-login-input tr:nth-child(2){ /* 비번 행 */
+    height: 40px;
+    font-weight: bold;
+}
+#k-login-input tr:nth-child(1)>td:nth-child(1){ 
+    width: 100px;
+}
+#k-login-input tr:nth-child(2)>td:nth-child(2){ 
+    width: 350px;
+}
+
+input[name="inputId"]{ /* 아이디 입력창 */
+    width: 340px;
+    height: 25px;
+}
+input[name="inputPw"]{ /* 비밀번호 입력창 */
+    width: 340px;
+    height: 25px;
+}
+
+#k-login-btn{ /* 로그인 버튼 */
+    width: 80px;
+    height: 50px;
+    margin-left: 20px;
+    background-color: rgb(173,158,135);
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    color:  white;
+}
+
+#k-login-btn:hover{
+    background-color: #4F3A28;
+    color: white;
+}
+
+#K-saveId{
+    margin: auto;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+#K-auto-login{
+    margin: auto;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+
+#k-login-bottom{ /* 아이디찾기비번찾기회원가입 */
+    margin-left: 32%;
+    margin-top: 5px;
+    width: 330px;
+    font-size: 16px;
+}
+
+#k-login-bottom>a{
+    color: black;
+    text-decoration: none;
+    padding-left: 10px;
+}
+#k-login-bottom>a:hover{
+    font-weight: bold;
+}
+
+/* 아이디저장 */
+.K-cookie{
+    display: flex;
+}
+
+.K-cookie>div{
+    width: 100px;
+    margin: auto;
+}
+
+.K-cookie>div:nth-child(1){
+    margin-left: 45%;
+}
+
+
+/* 팝업창(찾기) */
+#k-popup{
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    top: 380px;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 1000;
+}
+
+#k-popup-id{
+    display: none;
+}
+#k-popup-pw{
+    display: none;
+}
+
+.k-popup-out{ /* X버튼 */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.k-search-letter{ /* 아이디찾기 글씨 */
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.k-x-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.k-x-btn:hover{
+    background-color: gray;
+    border-radius: 0;
+}
+
+#k-popup table{ /* 입력창들 */
+    margin: auto;
+}
+
+#k-popup table input{
+    width: 200px;
+}
+
+.k-inputName{
+    width: 130px;
+}
+
+#k-popup>div:nth-child(1){ /* 아이디찾기 창 */
+    width: 500px;
+    background-color: #ebe7e3;
+}
+
+#k-popup>div:nth-child(1)>div:nth-child(3){ /* 입력창들 div */
+    margin-top: 20px;
+}
+
+input[name="k-inputNm-id"]{
+    height: 20px;
+    font-size: 13px;
+}
+input[name="k-inputPno-id"]{
+    font-size: 13px;
+    height: 20px;
+}
+input[name="k-inputId-id"]{
+    font-size: 13px;
+    height: 20px;
+}
+
+#k-id-search-btn{
+    width: 100px;
+    height: 40px;
+    margin-left: 20px;
+    background-color: rgb(173,158,135);
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+
+#k-id-search-btn:hover{
+    background-color: #4F3A28;
+    color: white;
+}
+
+#k-id-result{
+    background-color: gray;
+    width: 480px;
+    height: 90px;
+    margin: auto;
+    margin-top: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #k-id-result>div{
+    display: none;
+} */
+
+#k-id-result span{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#k-popup>div:nth-child(2){
+    width: 500px;
+    background-color: #ebe7e3;
+    height: 180px;
+}
+
+#k-pw-search-btn{
+    margin-left: 20px;
+    width: 110px;
+    height: 50px;
+    background-color: rgb(173,158,135);
+    letter-spacing: 2px;
+    border-radius: 5px;
+}
+
+#k-pw-search-btn:hover{
+    background-color: #4F3A28;
+    color: white;
+}
+
+#k-pw-result{
+    background-color: gray;
+    width: 480px;
+    height: 90px;
+    margin: auto;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#k-pw-result>div{
+    display: none;
+}
+
+#K-myForm input{
+    height: 17px;
+}

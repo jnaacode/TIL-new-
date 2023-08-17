@@ -1,0 +1,280 @@
+*{ /* 폰트 */
+    font-family: 'NanumSquareNeo-Variable' !important;
+    box-sizing: border-box;
+}
+@font-face { /* 폰트 */
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/*----------------------------------------헤더 부분 시작 ------------------------------------------*/
+/* 전체 */
+/*----------------------------------------헤더 부분 끝 ------------------------------------------*/
+
+/*----------------------------------------바디 부분------------------------------------------*/
+.C-deleteMember-container *{
+}
+
+
+.C-deleteMember-container{ /* 바디 가장 큰 틀 */
+    width: 100%;
+}
+
+.C-deleteMember-body{ /* 바디 가운데 틀 */
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    padding:  50px 0;
+}
+
+.C-deleteMember-sidebar{ /* 사이드바 큰 틀 */
+    width: 25%;
+}
+
+.C-delete-main{ /* 삭제 큰 틀 */
+    width: 75%;
+    border: 1px solid rgb(173,158,135);
+}
+
+.C-delete-main-div{ /* 삭제 내부 틀 */
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.C-delete-title{ /* 회원탈퇴 타이틀 글씨 */
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    background-color: rgba(178, 158, 135, 0.9);
+    color: white;
+    width: 100%;
+    height: 100px;
+    padding: 35px;
+    
+}
+
+.C-delete-title2{ /* 회원님의 정보를... 글씨 부분 */
+    text-align: center;
+    width: 100%;
+    padding-top: 50px;
+    font-weight: bold;
+}
+
+.C-delete-inputpassword-div{ /* 비밀번호 입력 큰 틀 */
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.C-deleteMemberpassword-div{/* 회원탈퇴 비밀번호 입력라인 */
+    width: 410px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.C-deleteMember-table{
+    display: flex;
+}
+
+.C-secession-div{ /* 회원탈퇴 큰 틀 */
+    
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.C-secession-div > div:nth-child(1){ /* 회원 탈퇴 약관 글씨 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+.C-deleteMember-checkbox{ /* 회원 탈퇴 약관 체크박스 */
+    height: 50px;
+    text-align: center;
+
+}
+
+#secession-terms{ /* 약관 내용 */
+    width: 500px;
+    height: 150px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
+.C-delete-btn{ /* 탈퇴 버튼 큰 틀 */
+    text-align: center;
+}
+
+.C-secession-title{ /* 회원 탈퇴 약관 글씨 */
+    text-align: right;
+}
+
+#info-update-btn{ /* 탈퇴 버튼 */
+    background-color: rgb(173,158,135);
+    border: none;
+    border-radius: 5px;
+    width: 70px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------풋터 부분  ------------------------------------------*/
+footer{
+    /* border: 1px solid black; */
+    width: 100%;
+}
+.k-first-div{
+    background-color: rgba(178, 158, 135, 0.9);
+}
+.k-first-div>div{
+    width: 1200px;
+    margin: auto;
+    height: 100px;
+    display: flex;
+    color: white;
+}
+.k-second-div{
+    background-color: #ebe7e3;
+}
+.k-second-div>div{
+    width: 1200px;
+    margin: auto;
+    height: 60px;
+    display: flex;
+}
+.k-third-div{
+    width: 1200px;
+    margin: auto;
+    height: 90px;
+    display: flex;
+}
+.k-f-container>div:nth-child(1)>img{
+    margin-top: 8px;
+}
+.k-f-container>div:nth-child(3){
+    margin-top: 40px;
+}
+.k-f-container>div:nth-child(2){
+    width: 100px;
+}
+.k-f-container>div:nth-child(4){
+    width: 520px;
+}
+.k-f-container span:nth-child(2n-1):hover{
+    cursor: pointer;
+    font-weight: bold;
+    color: #ebe7e3;
+}
+#k-sns{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-around;
+}
+#k-sns img{
+    width: 40px;
+}
+#k-sns img:hover{
+    transform: scale(1.2);
+    transition-duration: 0.2s;
+}
+#k-sns>div:nth-child(2){
+    margin-left: 15px;
+}
+.k-second-div span{
+    font-size: small;
+}
+.k-second-div span:nth-child(2n-1):hover{
+    color: rgba(90, 74, 56, 0.9);
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.k-second-div span{
+    padding-left: 5px;
+}
+.k-second-div>div{
+    line-height: 5px;
+    line-height: 55px;
+}
+.k-third-div{
+    padding-top: 14px;
+}
+.k-third-div>div{
+    font-size: small;    
+}
+.k-third-div img{
+    width: 200px;
+}
+.k-third-div>:nth-child(2){
+    width: 680px;
+}
+.k-third-div>:nth-child(3){
+    margin-top: 10px;
+}
+
+/*----------------------------------------풋터 부분 끝 ------------------------------------------*/
+
+

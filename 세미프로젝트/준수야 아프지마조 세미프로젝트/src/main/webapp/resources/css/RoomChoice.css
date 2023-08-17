@@ -1,0 +1,277 @@
+*{ /* 폰트 */
+    box-sizing: border-box;
+}
+@font-face { /* 폰트 */
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*----------------------------------------헤더 부분 시작 ------------------------------------------*/
+/* 전체 */
+
+/*----------------------------------------헤더 부분 끝 ------------------------------------------*/
+
+
+
+
+
+
+
+/*----------------------------------------예약 부분 시작------------------------------------------*/
+.C-rsv-main{ /* 호텔/날짜/인원글씨부분 전체 */
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+.C-rsv-main-text{ /* 호텔/날짜/인원글씨부분 */
+    min-width: 1200px;
+    height: 60px;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+    color: rgba(131, 105, 75, 0.72);
+}
+
+
+
+.C-reservation{ /* 예약 부분 전체 사이즈 */
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.C-rsv-head{
+    width: 1200px;
+    height: auto;
+    display: flex;
+    margin: auto;
+    border: 1px solid #eee;
+}
+
+.C-rsv-head > div{
+    text-align: center;
+}
+
+.C-choiceHotel{ /* 호텔선택 글씨 */
+    padding: 10px;
+    color: silver;
+}
+
+select[name="C-hotel-choice"]{ /* 호텔 선택 */
+    width: 180px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 13.5px;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    color: rgba(131, 105, 75, 0.72);
+    
+}
+
+.C-choiceRoom{ /* 객실선택 글씨 */
+    padding: 10px;
+    color: silver;
+}
+
+select[name="C-room-choice"]{ /* 객실 선택 */
+    width: 180px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 13.5px;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    color: rgba(131, 105, 75, 0.72);
+}
+
+option{
+    background-color: #f2f2f2;
+    color: #000; 
+    border-radius: 4px;
+}
+
+.C-checkInOut{
+    padding: 10px;
+    color: silver;
+}
+
+input[name="C-checkInTime"]{ /* 체크인 */
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: rgba(131, 105, 75, 0.72);
+    
+}
+
+.C-dateView{ /* 체크인 체크아웃 계산 큰 배경*/
+    width: 100px;
+    padding: 10px;
+    margin: auto;
+}
+
+.C-countdate{ /* 체크인 체크아웃 계산 */
+    width: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(131, 105, 75, 0.72);
+    
+}
+
+input[name="C-checkOutTime"]{ /* 체크아웃 */
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: rgba(131, 105, 75, 0.72);
+}
+
+.C-CountPerson{ /* 성인 어린이 선택 부분 */
+    color: silver;
+    display: flex;
+}
+
+.C-CountPerson > div { /* 인원 수 큰 배경 */
+    padding: 10px;
+}
+
+.C-person{ /* 성인 어린이 부분 버튼 */
+    display: flex;
+}
+
+.C-person > button{ /* + - 버튼 */
+    border: none;
+    width: 40px;
+    color: rgba(131, 105, 75, 0.72);
+    font-size: 30px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.C-person > button:hover{ /* + - 버튼 */
+    background-color: rgba(131, 105, 75, 0.72);
+    color: white;
+}
+
+input[name="C-adult"]{ /* 성인 */
+    width: 50px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    padding: 10px;
+    color: rgba(131, 105, 75, 0.72);
+   
+}
+
+input[name="C-children"]{ /* 어린이 */
+    width: 50px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    padding: 10px;
+
+    color: rgba(131, 105, 75, 0.72);
+}
+
+
+
+.C-rsv-button{ /* 버튼의 큰 배경 */
+    margin: auto;
+    width: 50%;
+}
+
+.C-rsv-button > button{ /* 예약 버튼 */
+    width: 90px;
+    height: 50px;
+    background-color: rgba(131, 105, 75, 0.72);
+    
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.C-rsv-button > button:hover{ /* 예약 버튼 */
+    background-color: rgb(85, 77, 55);
+}
+
+.accordion-body{ /* display none인 div들 */
+    display: flex;
+}
+
+.accordion-body img{    /* 객실 사진 */
+    padding-top: 20px;
+    width: 500px;
+    border-radius: 20px;
+}
+
+.test{ /* 객실 선택 부분 */
+    width: 1200px; 
+    margin: auto; 
+    height: 600px;
+}
+
+.accordion-item button{
+    background-color:rgba(131, 105, 75, 0.72); 
+    color:white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+accordion-item button:focus{
+    background-color: rgba(131, 105, 75, 0.72);
+}
+
+.C-room-text{
+    display: flex;
+}
+
+.C-roominner-div{
+    margin: 40px 20px;
+}
+.C-btn-area{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+}
+.C-btn-rsv{
+    background-color: rgb(85, 77, 55);
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 15px;
+    
+}
+.C-btn-rsv:hover{
+    background-color: rgb(85, 77, 55);
+}
+
+.accordion test  h3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*----------------------------------예약 부분 끝---------------------------------*/
+
+/*---------------------------------footer--------------------------------------*/
+
+

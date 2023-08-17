@@ -1,0 +1,193 @@
+*{box-sizing: border-box;}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+} 
+
+*{
+    font-family: 'Pretendard-Regular';
+}
+
+/* div{border: 1px solid black;} */
+
+.K-first{width: 100%;}
+.K-first>div{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    padding: 20px 0;
+}
+
+/* 사이드바 */
+.K-side{
+    width: 25%;
+    height: 200px;
+}
+
+/* 찐 내용 */
+.K-all{
+    width: 75%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.K-all>div{ /* 내용 넓이 지정 */
+    width: 850px;
+    margin: auto;
+    border: 5px solid rgba(178, 158, 135, 0.9) ;
+}
+
+.K-all>div>div:nth-of-type(1){ /* 이벤트 작성 글씨 */
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-bottom: 1px solid gray;
+    height: 50px;
+}
+
+#K-form{
+    margin-top: 20px;
+}
+
+#K-form>div:nth-child(1){ /* 제목입력 글씨 */
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+
+#K-form>div:nth-child(3){
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid gray;
+    margin-right: 10px;
+}
+
+input[name="K-title"]{ /* 제목 input태그 */
+    width: 822px;
+    height: 35px;
+    background-color: white;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+#K-form>div:nth-child(4){ /* 내용입력 + 파일 추가 버튼 div */
+    margin-top: 10px;
+    border-top: 1px solid gray;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#K-form>div:nth-child(4)>span{ /* 내용입력 글씨 */
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+#K-form>div:nth-child(3)>div{ /* 사진 input태그 + 미리보기 공간 */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin-left: 20px;
+}
+
+#K-photo{ /* file input 태그 width 지정 */
+    width: 170px;
+}
+
+#K-image-select{ /* img 삽입될 div */
+    display: flex;
+    padding-left: 20px;
+}
+
+textarea[name="K-content"]{
+    resize: none;
+    font-size: 15px;
+    margin-left: 10px;
+}
+#K-form>div:nth-child(6){ /* 버튼들 div */
+    display: flex;
+    padding-left: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#K-cancel{ /* 작성 취소 버튼 */
+    margin-right: 150px;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    background-color: rgb(173,158,135);
+}
+
+#K-write{
+    background-color: rgb(173,158,135);
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    height: 30px;
+    width: 80px;
+    letter-spacing: 5px;
+}
+
+.K-img{
+    height: auto;
+}
+
+
+
+/* 이미지 새로 수정한 부분.... */
+.k-img-box{
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+.k-img-box>label{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #cfcdcd;
+}
+
+.k-inputImg{
+    display: none;
+}
+
+.k-deleteImg{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    cursor: pointer;
+}
+.k-upload-img{
+    display: flex;
+}
+
+.k-upload{
+    width: 150px;
+    height: 300px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.k-upload>label{
+    width: 150px;
+    height: 300px;
+}
+
+.k-preview{
+    max-width: 100%;
+    max-height: 100%;
+}

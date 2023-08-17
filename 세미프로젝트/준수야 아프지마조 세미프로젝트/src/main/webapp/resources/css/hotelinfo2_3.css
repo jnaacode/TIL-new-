@@ -1,0 +1,406 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Pretendard-Regular';
+    /* border: 1px solid black; */
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+} 
+
+.L-maindisplay{
+    display: flex;
+    justify-content: space-around;
+    width: 1200px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+/* 사이드바 */
+
+/* .L-side{
+    width: 25%;
+}
+
+.L-sidelist{
+    list-style-type: none;
+    padding: 0px 10px 10px 10px;
+    margin: 0px 10px 10px 10px;
+    white-space: nowrap;
+    width: 180px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(178, 158, 135, 0.9);
+    color: white;
+}
+
+.L-sidelist > li:nth-of-type(1){
+    font-size: 24px;
+    padding-bottom: 10px;
+    
+}
+
+.L-sidelist a{
+    text-decoration: none;
+    color: white;
+} */
+
+
+
+
+/* 호텔소개 */
+.L-main{
+    white-space: nowrap;
+    width: 75%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #eee;
+}
+
+
+/* 지점 소개 */
+.L-hotelpoint{
+    width: 100%;
+}
+
+.L-hotelpoint > pre{
+    text-align: center;
+}
+
+.L-hotelpoint > div:nth-of-type(1){
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgb(207, 191, 167);
+    color: white;
+    width: 100%;
+    border-bottom: 5px solid #101010;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.L-hotelpoint > div:nth-of-type(2){
+    height: auto;
+}
+
+/* 지점 소개 사진 */
+#L-hotel1{
+    width: 95%;
+    white-space: normal;
+    margin: 40px 0px;
+}
+
+
+/* 객실 소개 */
+.L-roompoint-main{
+    width: 100%;
+}
+
+.L-roompoint{
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgb(207, 191, 167);
+    margin-bottom: 30px;
+    color: white;
+
+    border-bottom: 5px solid #101010;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.L-roompoint-1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.L-roompoint-1 span{
+    color: #aaa;
+}
+
+.L-roomimg{
+    width: 250px;
+    height: 142px;
+}
+
+.L-roomA{
+    text-decoration: none;
+    color: black;
+    position: relative
+}
+
+.L-roomA:hover{
+    text-decoration: none;
+    color: black;
+    position: relative
+}
+
+.L-roomA1{
+    text-decoration: none;
+    color: black;
+    width: 100px;
+    position: relative
+}
+
+.L-roomA1:hover{
+    text-decoration: none;
+    color: black;
+    position: relative
+}
+
+.L-roomimg1{
+    width: 250px;
+    height: 142px;
+}
+
+/* 사진에 찜 추가 */
+/* .L-roomimg:hover{
+    transition-duration: 0.5s;
+}
+
+.L-roomimg1:hover{
+    transition-duration: 0.5s;
+}
+
+.L-rooming img:hover{
+    transition-duration: 0.5s;
+}
+
+.L-rooming1 img:hover{
+    transition-duration: 0.5s;
+} */
+
+/* 찜1 */
+/* #L-star3-1{
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    border: 0;
+    display: none;
+}
+
+#L-star3-1-1{
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    line-height: 40px;
+    cursor: pointer;
+    display: none;
+    color: lightgray;
+}
+
+#L-star3-1-2{
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    line-height: 40px;
+    cursor: pointer;
+    display: none;
+    color: lightgray;
+}
+
+#L-star3-1-1 > img{
+    width: 30px;
+}
+
+#L-star3-1-2 > img{
+    width: 30px;
+    
+} */
+
+/* 찜2 */
+/* #L-star3-2{
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    border: 0;
+    display: none;
+}
+
+#L-star3-2-1{
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    line-height: 40px;
+    cursor: pointer;
+    display: none;
+    color: lightgray;
+}
+
+#L-star3-2-2{
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    line-height: 40px;
+    cursor: pointer;
+    display: none;
+    color: lightgray;
+}
+
+#L-star3-2-1 > img{
+    width: 30px;
+}
+
+#L-star3-2-2 > img{
+    width: 30px;
+} */
+
+
+/* 찜3 */
+/* #L-star3-3{
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    border: 0;
+    display: none;
+}
+
+#L-star3-3-1{
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 40px;
+    cursor: pointer;
+    display: none;
+    color: lightgray;
+}
+
+#L-star3-3-2{
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 40px;
+    cursor: pointer;
+    display: none;
+    color: lightgray;
+}
+
+#L-star3-3-1 > img{
+    width: 30px;
+}
+
+#L-star3-3-2 > img{
+    width: 30px;
+} */
+
+/* 찜 버튼 */
+#L-hbtn{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 80px;
+    height: 30px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(207, 191, 167);
+    border: 0;
+    border-radius: 5px;
+}
+
+
+
+
+.L-roomA > pre{
+    font-size: 12px;
+    text-align: left;
+    line-height: 24px;
+}
+
+.L-roomA1 > pre{
+    font-size: 12px;
+    text-align: left;
+    line-height: 24px;
+}
+
+.L-roomA p{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.L-roomA1 p{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.L-roompoint-border{
+    border: 1px solid #eee;
+    width: 250px;
+}
+
+/* 오시는 길 */
+.L-roadmain{
+    width: 100%;
+    display: block;
+    justify-content: space-between;
+}
+
+.L-road{
+    font-size: 24px;
+    font-weight: bold;
+    background-color: rgb(207, 191, 167);
+    margin-bottom: 30px;
+    color: white;
+
+    border-bottom: 5px solid #101010;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.L-map-main{
+    display: flex;
+}
+
+.L-map{
+    width: 50%;
+}
+
+.L-address{
+    width: 50%;
+}
+
+.L-address > pre{
+    line-height: 50px;
+    padding-top: 70px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

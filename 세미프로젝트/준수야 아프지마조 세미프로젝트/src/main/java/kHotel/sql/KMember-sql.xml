@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>KMember-sql.xml</comment>
+
+	<!-- 로그인 -->
+	<entry key="login">
+		SELECT MEMBER_NO, MEMBER_ID, MEMBER_NM, MEMBER_EMAIL, MEMBER_TEL, MEMBER_ADD, 
+			 MEMBER_ADMIN, MEMBER_PNO, SECESSION_FL
+		     FROM MEMBER
+		WHERE MEMBER_ID=?
+		AND MEMBER_PW=?
+	</entry>
+	
+	<!-- 아이디 찾기 -->
+	<entry key="idSearch">
+		SELECT MEMBER_ID FROM MEMBER
+		WHERE MEMBER_NM = ?
+		AND MEMBER_PNO = ?
+		AND SECESSION_FL = 'N'
+	</entry>
+	
+	<!-- 임시비번용 정보 확인 -->
+	<entry key="rightInfo">
+		SELECT MEMBER_NO FROM MEMBER
+		WHERE MEMBER_NM=?
+		AND MEMBER_PNO=?
+		AND MEMBER_ID=?
+	</entry>
+	
+	<!-- 비밀번호 변경 전 회원정보 확인 -->
+	<entry key="rePw">
+		SELECT COUNT(*) FROM MEMBER
+		WHERE MEMBER_NM = ?
+		AND MEMBER_PNO = ?
+		AND MEMBER_ID = ?
+		AND SECESSION_FL = 'N'
+	</entry>
+	
+	<!-- 비밀번호 변경(로그인 전) -->
+	<entry key="newRePw">
+		UPDATE MEMBER 
+		SET MEMBER_PW=?
+		WHERE MEMBER_ID=?
+	</entry>
+	
+	<!-- 예약 번호 구하기 -->
+	<entry key="bookNo">
+		SELECT SEQ_BOOK_NO.NEXTVAL FROM DUAL
+	</entry>
+	
+	<!-- 예약테이블 insert -->
+	<entry key="reservation">
+		INSERT INTO RESERVATION
+		VALUES(?, ?, ?, ?, DEFAULT, ?, ?)
+	</entry>
+	
+	<!-- 결제테이블 insert -->
+	<entry key="calculate">
+		INSERT INTO CALCULATE
+		VALUES(SEQ_CALCULATE_NO.NEXTVAL, ?, DEFAULT, ?, ?, ?)
+	</entry>
+	
+	<!-- 쿠폰 테이블 update -->
+	<entry key="coupon">
+		UPDATE COUPON
+		SET COUPON_ST = 'Y'
+		WHERE COUPON_NO = (
+		    SELECT MIN(COUPON_NO) FROM COUPON
+		    WHERE MEMBER_NO = ?
+		    AND COUPON_ST = 'N'
+		)
+		AND MEMBER_NO = ?
+		AND COUPON_DT &gt;= SYSDATE
+		AND COUPON_ST = 'N'
+	</entry>
+
+</properties>

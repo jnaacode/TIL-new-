@@ -1,0 +1,182 @@
+
+.board-list a{
+    text-decoration: none;
+    color: black;
+}
+
+.board-list a:hover{
+    text-decoration: underline;
+}
+
+main{
+    width: 75%;
+    margin: auto;
+    display: flex;
+}
+
+.board-list{
+    width: 100%;
+    margin: auto;
+}
+
+.board-name{
+    font-size: 2.5em;
+    margin-left: 30px;
+}
+
+.list-wrapper{
+    width: 100%;
+    min-height: 670px;
+}
+
+.list-table{
+    width: 100%;
+    padding: 20px;
+    border-collapse: collapse;
+}
+
+.list-table > thead{
+    color: black;
+}
+
+.list-table tr{
+    height: 60px;
+}
+
+.list-table > tbody >tr{
+    border-bottom: 1px solid gray;
+}
+
+.list-table tr>*{
+    text-align: center;
+}
+
+.list-table tr > *:nth-of-type(1){width: 10%;}
+.list-table tr > td:nth-of-type(2){
+    width: 50%;
+    text-align: left;
+    padding-left: 50px;
+}
+.list-table tr > *:nth-of-type(3){width: 15%;}
+.list-table tr > *:nth-of-type(4){width: 15%;}
+.list-table tr > *:nth-of-type(5){width: 10%;}
+
+.btn-area{
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* 버튼 */
+#insertBtn{
+    margin-right: 50px;
+    width: 80px;
+    height: 40px;
+
+    background-color: white;
+    border-radius: 5px;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pagination{
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+}
+
+.pagination>li{
+    width: 20px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.pagination a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.pagination .current{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+#boardSearch{
+    width: 500px;
+    height: 30px;
+    
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+
+#boardSearch *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#boardSearch select{
+    width: 100px;
+}
+
+#boardSearch input{
+    margin: 0 10px;
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+#boardSearch button{
+    width: 100px;
+    background-color: wheat;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: 0;
+}
+
+
+ul, li, dl, dd {list-style:none; margin:0; padding: 0;}
+a {text-decoration:none;}
+body > .H-div{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+}
+.H-snb { width: 25%; }
+
+.H-side-bar{ 
+    
+    width: 70%;
+    background:rgb(207, 191, 167);
+    height:auto; 
+    box-sizing:border-box;
+    color:#fff; 
+    box-shadow:1px 0px 20px rgba(0,0,0,0.2);
+    margin:auto
+}
+
+.H-side-bar li {border-bottom:1px solid rgba(255,255,255,0.2);}
+.H-side-bar li.active, .side-bar li:hover {background:rgba(0,0,0,0.4);}
+.H-side-bar li a {color:#fff;line-height:55px; font-size:18px; display:block; padding:0 20px; box-sizing:border-box; position:relative;}
+.H-side-bar li a .s_icon {padding-right:7px; font-size:15px;}
+.H-side-bar li a .arrow {position:absolute; top:20px; right:20px; line-height:0px; font-size:12px;}
+.H-side-bar dd a:hover {background:rgba(255,255,255,0.1);}
+.H-side-bar dd.active a{color:#ffff6f;}
+
+.dif{
+    width: 75%;
+}
+
+.H-block {display:block;}
+.H-none {display:none; right: 50px;}
+
+
+*{box-sizing: border-box;}  

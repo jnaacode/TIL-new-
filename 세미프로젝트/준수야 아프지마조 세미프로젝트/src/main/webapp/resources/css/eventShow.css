@@ -1,0 +1,101 @@
+*{box-sizing: border-box;}
+
+/* div{border: 1px solid black;} */
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+} 
+
+*{
+    font-family: 'Pretendard-Regular';
+}
+
+.K-all{
+    width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+
+    margin-bottom: 20px;
+}
+
+.K-all>div:nth-child(1){ /* 이벤트 글씨 */
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.K-all>div:nth-child(2){ /* 이벤트 제목 부분 */
+    border-bottom: 1px solid lightgray;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.K-all>div:nth-child(3){ /* 내용 들어갈 박스 */
+    margin: auto;
+    margin-top: 20px;
+    width: 1160px;
+    border: 1px solid lightgray;
+}
+
+
+#K-list-btn{
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    width: 100px;
+    height:40px;
+    /* cursor: pointer; */
+    letter-spacing: 2px;
+    border-radius: 5px;
+    background-color:  rgb(173,158,135);
+    margin-top: 10px;
+    cursor: pointer;
+    border: 0;
+}
+
+#K-list-btn:hover{
+    background-color: #4F3A28;
+    color: white;
+}
+
+
+.K-all a{
+    color: black;
+    text-decoration: none;
+}
+
+.boardImg{
+    width: 1155px;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+}
+
+/* 이미지 */
+.boardImg img{
+    max-width: 95%;
+    max-height: 95%;
+}
+
+.K-btn{
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    background-color:  rgb(173,158,135);
+    cursor: pointer;
+    border: 0;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.K-btn:hover{
+    background-color: #4F3A28;
+    color: white;
+}

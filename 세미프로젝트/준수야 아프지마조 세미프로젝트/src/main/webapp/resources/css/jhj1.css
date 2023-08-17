@@ -1,0 +1,154 @@
+  /* div{ border: 1px solid black;}   */
+
+*{ box-sizing: border-box; }
+
+.J-1{ width: 100%;
+        height: 1200px;
+        display: flex;
+        justify-content: center;
+          /* border: 2px solid red;   */
+}
+
+.J-2{
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.J-3{
+    height: 67%;
+    width: 1000px;
+    display: flex;
+
+    /* border: 1px solid blue;   */
+}
+
+.J-4{
+    height: 1%;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /* border: 1px solid blue; */
+    
+}
+
+.J-5{
+
+    width: 50%;
+    
+
+     /* border: 2px solid green;  */
+}
+
+.J-6{
+
+    width: 50%;
+ 
+    /* border: 2px solid green;  */
+}
+
+.J-7{  
+    height: 27%;
+    width: 800px;
+
+    overflow: hidden; /* 너비를 넘어가는 내용 숨김 */
+            margin: 0 auto; /* 가운데 정렬을 위한 마진 설정 */
+
+}
+
+
+
+#J4-1{
+
+    height: 80%;
+    width: 60%;
+    background-color: burlywood;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: black;
+    
+}
+
+#J5-1{
+    height: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#J5-2{
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+#J6-1{
+    height: 45%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#J6-2{
+    height: 55%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+ .fade-in {
+    opacity: 0;
+    transition: opacity 0s ease-in;
+  }
+  
+  .fade-in.active {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+  }
+
+
+.JJ-7{
+    width: 100%;
+    height: 100%;
+
+    /* border: 1px solid cadetblue; */
+
+   /*  border: 1px solid salmon; */
+    display: flex; /* 이미지들을 가로로 나열하기 위해 플렉스 박스 사용 */
+    transition: transform 0.3s ease-in-out; /* 슬라이드 전환 애니메이션 설정 */
+  
+}
+
+.JJ-7 img{
+   
+
+    /* border: 1px solid violet; */
+}
+#j-img1{ height: 85%; width: 85%;}
+#j-img2{ height: 50%; width: 50%;}
+#j-img3{ height: 95%; width: 95%;}
+#j-img4{height: 95%; width: 95%;}
+
+#J5-1 img{
+    height: 95%; width: 95%;
+}
+
+#J6-2 img{
+    height: 95%; width: 95%;
+}
+
+
+

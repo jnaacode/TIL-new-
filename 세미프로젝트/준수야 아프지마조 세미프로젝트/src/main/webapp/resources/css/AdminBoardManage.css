@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    /* border:  1px solid black;     */
+    
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Pretendard-Regular';
+}
+.H-main {
+    display: flex;
+    margin: auto;
+    width: 1200px;
+}
+
+.H-maindisplay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    text-align: center;
+    border:1px solid #eee;
+    width: 100%;
+
+}
+
+.H-list {
+    width: 820px;
+}
+
+.H-write {
+    font-size: 24px;
+    margin-bottom: 10px;
+
+}
+
+
+/* 이벤트 전체 리스트 */
+.H-div {
+    width: 75%;
+    display: flex;
+}
+
+
+
+
+.H-href {
+    margin: 10px;
+    text-decoration:none;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height : 250px;
+}
+
+.H-span{
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    border:  1px solid black;
+    height: 200px;
+    width: 250px;
+    background-color: rgba(178, 158, 135, 0.9);
+}
+
+
+*{box-sizing: border-box;}

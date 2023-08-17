@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>PHotel-sql.xml</comment>
+
+	<entry key="searchBoardList">
+		SELECT BOARD_NO, BOARD_TITLE,
+		TO_CHAR(BOARD_DT,'YYYY-MM-DD')BOARD_DT
+		FROM BOARD
+		WHERE MEMBER_NO = ?
+		AND BOARD_CD = 3
+		AND BOARD_ST = 'N'
+	</entry>
+
+	<entry key="searchReviewList">
+		SELECT BOARD_NO, BOARD_TITLE,
+		TO_CHAR(BOARD_DT,'YYYY-MM-DD')BOARD_DT
+		FROM BOARD
+		WHERE MEMBER_NO = ?
+		AND BOARD_CD = 2
+		AND BOARD_ST = 'N'
+		ORDER BY BOARD_CD DESC
+	</entry>
+
+	<!-- 이벤트 리스트 조회 -->
+	<entry key="eventList">
+		SELECT EVENT_NO, EVENT_TITLE, IMG_EVENT_RENAME FROM
+		EVENT
+		JOIN EVENT_IMG USING (EVENT_NO)
+		WHERE EVENT_DT >= SYSDATE
+		AND
+		IMG_EVENT_LEVEL=0
+		AND EVENT_ST = 'N'
+	</entry>
+
+	<!-- 종료된 이벤트 조회 -->
+	<entry key="eventEndList">
+		SELECT EVENT_NO, EVENT_TITLE, IMG_EVENT_RENAME FROM
+		EVENT
+		JOIN EVENT_IMG USING (EVENT_NO)
+		WHERE EVENT_DT &lt; SYSDATE
+		AND
+		IMG_EVENT_LEVEL=0
+		AND EVENT_ST = 'N'
+	</entry>
+
+	<!-- 관리자 멤버 게시글 수 조회 -->
+	<entry key="listCountMember">
+		SELECT COUNT(*)
+		FROM MEMBER
+		WHERE SECESSION_FL = 'N'
+	</entry>
+
+	<!-- 관리자 신고된 수 조회 -->
+	<entry key="listReportCount">
+		SELECT COUNT(*)
+		FROM REPORT
+		WHERE BOARD_NO IN (SELECT
+		BOARD_NO
+		FROM BOARD
+		WHERE MEMBER_NO =?
+		AND BOARD_CD = 3)
+	</entry>
+
+
+	<!-- 관리자 신고된 수 조회 -->
+	<entry key="selectBoardList">
+		SELECT * FROM(
+		SELECT ROWNUM RNUM, A.* FROM
+		(SELECT
+		MEMBER_NO,MEMBER_ID,MEMBER_NM,MEMBER_TEL,
+		MEMBER_EMAIL,MEMBER_ADD,SECESSION_FL
+		FROM MEMBER
+
+		ORDER BY MEMBER_NO
+		DESC)A
+		)
+		WHERE RNUM BETWEEN ? AND ?
+
+
+	</entry>
+
+
+	<!-- 게시판 이름 조회 -->
+	<entry key="selectBoardName">
+		SELECT BOARD_NM
+		FROM BOARD_TYPE
+		WHERE BOARD_CD = ?
+	</entry>
+
+	<!-- 검색 시 조건에 만족하는 회원 수 조회 -->
+	<entry key="searchIdCount">
+		SELECT COUNT(*) FROM MEMBER
+		WHERE SECESSION_FL = 'N'
+
+	</entry>
+
+
+	<!-- 검색 시 조건에 만족하는 회원 수 조회 -->
+	<entry key="searchId1">
+		SELECT * FROM(
+		SELECT ROWNUM RNUM, A.* FROM
+		(SELECT
+		MEMBER_NO,MEMBER_ID,MEMBER_PW,MEMBER_NM,MEMBER_TEL,
+		MEMBER_EMAIL,MEMBER_ADD,SECESSION_FL
+		FROM MEMBER
+
+		WHERE SECESSION_FL ='N'
+	</entry>
+
+	<!-- 회원 이름 조회 -->
+	<entry key="searchId2">
+		ORDER BY MEMBER_NO DESC)A
+		)
+		WHERE RNUM BETWEEN ? AND ?
+	</entry>
+
+	<!-- 회원 탈퇴 -->
+	<entry key="adminDeleteMember">
+		UPDATE MEMBER SET SECESSION_FL = 'Y'
+		WHERE MEMBER_NO =
+		?
+		AND MEMBER_NO BETWEEN ? AND ?
+	</entry>
+
+	<!-- 리뷰/별점 내용 조회 -->
+	<entry key="selectReview1">
+		SELECT * FROM (
+		SELECT ROWNUM RNUM, A.* FROM(
+		SELECT
+		B.BOARD_NO, BOARD_DT, BOARD_CONTENT, REVIEW_STAR,
+		IMG_REVIEW_RENAME,
+		TAG_CONTENT, B.MEMBER_NO, MEMBER_ID,
+		B.BOOK_NO, ROOM_NM, HOTEL_TITLE
+		FROM BOARD B
+		LEFT JOIN REVIEW_IMG RI ON(B.BOARD_NO = RI.BOARD_NO)
+		LEFT
+		JOIN TAG T ON(T.BOARD_NO = B.BOARD_NO)
+		JOIN MEMBER M ON(M.MEMBER_NO =
+		B.MEMBER_NO)
+		JOIN RESERVATION RE ON(RE.BOOK_NO = B.BOOK_NO)
+		JOIN ROOM
+		USING (ROOM_NO)
+		JOIN HOTEL USING(HOTEL_NO)
+		WHERE BOARD_ST = 'N'
+		ORDER BY
+		BOARD_DT DESC
+
+		) A
+		)
+		WHERE RNUM BETWEEN ? AND ?
+	</entry>
+
+	<!-- 리뷰/별점 수 조회 -->
+	<entry key="selectReview">
+		SELECT COUNT(*) FROM BOARD
+		WHERE BOARD_CD = 3
+		AND
+		BOARD_ST = 'N'
+	</entry>
+
+	<!-- 신고 내용 등록하기 -->
+	<entry key="declar">
+		INSERT INTO REPORT VALUES(?,?,?,DEFAULT)
+	</entry>
+
+	<!-- 리뷰/별점 상세 조회 -->
+	<entry key="showReview">
+
+		SELECT B.BOARD_NO, BOARD_DT, BOARD_CONTENT,
+		REVIEW_STAR,
+		IMG_REVIEW_RENAME,
+		TAG_CONTENT, B.MEMBER_NO, MEMBER_ID,
+		B.BOOK_NO, ROOM_NM, HOTEL_TITLE
+		FROM BOARD B
+		LEFT JOIN REVIEW_IMG RI
+		ON(B.BOARD_NO = RI.BOARD_NO)
+		LEFT
+		JOIN TAG T ON(T.BOARD_NO = B.BOARD_NO)
+		JOIN MEMBER M ON(M.MEMBER_NO =
+		B.MEMBER_NO)
+		JOIN RESERVATION RE
+		ON(RE.BOOK_NO = B.BOOK_NO)
+		JOIN ROOM
+		USING (ROOM_NO)
+		JOIN HOTEL
+		USING(HOTEL_NO)
+		WHERE BOARD_ST = 'N'
+		AND B.BOARD_NO = ?
+		ORDER BY BOARD_DT
+		DESC
+
+	</entry>
+
+	<!-- 리뷰 삭제 -->
+	<entry key="deleteReview">
+		UPDATE BOARD SET BOARD_ST = 'Y'
+		WHERE BOARD_NO = ?
+		AND BOARD_CD=3
+		<!-- AND MEMBER_NO = ? -->
+	</entry>
+
+
+</properties>
+

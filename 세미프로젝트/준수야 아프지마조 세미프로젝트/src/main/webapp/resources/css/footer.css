@@ -1,0 +1,129 @@
+*{box-sizing: border-box;}
+
+/* div{border: 1px solid black;} */
+
+.F-first-div{
+    width: 100%;
+    background-color: rgba(178, 158, 135, 0.9);
+}
+
+.F-f-container{
+    position: relative;
+    width: 1200px;
+    margin: auto;
+    height: 100px;
+    display: flex;
+}
+
+.F-f-container1{
+    width: 0px;
+}
+
+
+.F-logo{
+    width: 180px;
+    position: absolute;
+    left: 10px;
+    margin-top: 7px;
+}
+
+.F-second-div{
+    width: 100%;
+    background-color: #ebe7e3;
+}
+.F-second-div1{
+    background-color: #ebe7e3;
+    margin: auto;
+    width: 1200px;
+    height: 60px;
+}
+
+.F-second-div11{
+    width: 600px;
+    line-height: 55px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.F-third-div{
+    width: 1200px;
+    margin: auto;
+    height: 90px;
+    display: flex;
+    position: relative;
+}
+
+.F-f-container2{
+    width: 220px;
+    top: 40px;
+    position: absolute;
+    left: 300px;
+    color: white;
+}
+
+
+.F-f-container2-1:hover{
+    cursor: pointer;
+    font-weight: bold;
+    color: #ebe7e3;
+}
+
+#F-sns{
+    width: 520px;
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-around;
+    width: 200px;
+    position: absolute;
+    right: 5px;
+}
+
+.F-sns-img{
+    width: 40px;
+}
+
+.F-sns-img:hover{
+    transform: scale(1.2);
+    transition-duration: 0.2s;
+}
+
+#F-sns1{
+    margin-left: 15px;
+}
+
+.F-second-div span{
+    font-size: small;
+}
+
+.F-second-div1-1:hover{
+    color: rgba(90, 74, 56, 0.9);
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.F-second-div span{
+    padding-left: 5px;
+}
+
+.F-third-div{
+    margin: auto;
+    width: 1200px;
+    position: relative;
+}
+
+.F-third-div1{
+    width: 340px;
+    font-size: small; 
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.F-third-div2-1{
+    width: 200px;
+}
+.F-third-div2{ 
+    width: 205px;
+    top: 20px;
+    position: absolute;
+    right: 5px;
+}

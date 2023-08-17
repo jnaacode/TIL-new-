@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Pretendard-Regular';
+}
+
+.P-top {
+    display: flex;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 1200px;
+    
+}
+
+.P-maindisplay {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    text-align: center;
+    border: 1px solid #eee;
+    width: 75%;
+    height: 1000px;
+    overflow-y: scroll;
+}
+
+/* 메인화면 */
+
+.P-blank1 {
+    width: 100%;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 50px;
+
+    background-color: rgba(178, 158, 135, 0.9);
+    color: white;
+}
+
+.P-dropdown {
+    display: flex;
+    justify-content: right;
+    padding: 30px;
+}
+
+.P-qna-1 {
+    width: 100%;
+    padding: 15px;
+    justify-content: center;
+}
+
+.P-qna {
+    display: flex;
+    height: 50px;
+    border-bottom: 1px solid gray;
+
+}
+
+.P-qna>div:nth-child(1) {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.P-qna>div:nth-child(2) {
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 빈칸 */
+.P-qna>div:nth-child(3) {
+    width: 50px;
+}
+
+/* 시간 */
+.P-qna>div:nth-child(4) {
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.P-qna>div:nth-child(5) {
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.P-qna-btn {
+    height: 70%;
+    margin: 10px 0;
+    border: 0;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: rgb(173,158,135);
+    color: white;
+}
+
+.P-qna-btn:hover{
+    background-color: #4F3A28;
+}
+
+
+.P-pg {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.page-link {
+    color: black;
+}
+
+.page-link:hover {
+    color: black;
+    background-color: transparent;
+}

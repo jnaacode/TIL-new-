@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>JHotel</comment>
+
+
+	<!-- 회원가입 -->
+	<entry key="signUp11">
+		INSERT INTO MEMBER
+		VALUES(SEQ_MEMBER_NO.NEXTVAL, ?, ?,
+		?, ?, ?, ?, ?,
+		 DEFAULT, DEFAULT)
+	</entry>
+
+	<!-- 아이디 중복 검사 -->
+	<entry key="idDuplicheck">
+		SELECT COUNT(*)
+		FROM MEMBER
+		WHERE MEMBER_ID = ?
+		AND SECESSION_FL = 'N'
+	</entry>
+
+	<!-- 현재 예약 -->
+	<entry key="reservationUp">
+		SELECT BOOK_NO , HOTEL_TITLE, ROOM_NM,TO_CHAR(CHECKIN_DT, 'YYYY-MM-DD') CHECKIN_DT ,TO_CHAR(CHECKOUT_DT, 'YYYY-MM-DD') CHECKOUT_DT, CALCULATE_ST ,ROOM_IMG
+		FROM RESERVATION
+		JOIN CALCULATE USING(BOOK_NO)
+		JOIN ROOM USING(ROOM_NO)
+		JOIN HOTEL USING(HOTEL_NO)
+		WHERE MEMBER_NO = ?
+		AND <![CDATA[CHECKOUT_DT > SYSDATE]]>
+		ORDER BY BOOK_NO DESC
+	</entry>
+
+	<!-- 이전 예약 -->
+	<entry key="reservation">
+		SELECT BOOK_NO , HOTEL_TITLE, ROOM_NM,TO_CHAR(CHECKIN_DT, 'YYYY-MM-DD') CHECKIN_DT,TO_CHAR(CHECKOUT_DT, 'YYYY-MM-DD') CHECKOUT_DT ,ROOM_IMG
+		FROM RESERVATION
+		JOIN ROOM USING(ROOM_NO)
+		JOIN HOTEL USING(HOTEL_NO)
+		WHERE CHECK_FL = 'Y'
+		AND MEMBER_NO = ?
+		AND <![CDATA[CHECKOUT_DT < SYSDATE]]>
+		ORDER BY BOOK_NO DESC
+	</entry>
+
+	<!-- 룸 사진 가져오기 -->
+	<entry key="getRoomImg">
+		SELECT ROOM_IMG
+		FROM ROOM
+		WHERE ROOM_NM = ?
+	</entry>
+	
+	
+	<!-- 리뷰 등록 -->
+	<entry key="reviewUpdate">
+		INSERT INTO BOARD VALUES(SEQ_BOARD_NO.NEXTVAL,'리뷰', ? ,DEFAULT,
+									DEFAULT , 3 , ? , ? ,?)
+	</entry>
+	
+	<!-- 다음 게시글 번호 얻어옴 -->
+	<entry key="nextBoardNo">
+		SELECT BOARD_NO FROM BOARD
+		WHERE BOARD_CONTENT = ?
+		AND BOARD_ST = 'N'
+		AND BOARD_CD = 3
+	</entry>
+	
+	<!-- 이미지 삽입 -->
+	<entry key="reviewImg">
+		INSERT INTO REVIEW_IMG VALUES(SEQ_IMG_REVIEW_NO.NEXTVAL, ?, 0 , ?) 
+	</entry>
+
+
+	<!-- 태그 삽입 -->
+
+    <entry key="tagUpdate1">
+            INSERT INTO TAG VALUES(?,?,'Y')
+           
+    </entry>
+    
+  
+
+	<!-- 예약을 위한 memberNo 얻어오기 -->
+	<entry key="getMemberNo">
+		SELECT MEMBER_NO
+		FROM RESERVATION
+		JOIN MEMBER USING(MEMBER_NO)
+		WHERE MEMBER_ID = ?
+	</entry>
+
+	<!-- 현재 예약 취소 -->
+	<entry key="reviewCancel">
+		DELETE RESERVATION
+		WHERE BOOK_NO = ?
+		AND MEMBER_NO = ?
+	</entry>
+
+	<!-- 결제 정보 지우기 -->
+	<entry key="deleteCalculate">
+		DELETE CALCULATE
+		WHERE BOOK_NO = ?
+	</entry>
+	
+	<!-- FAQ 작성을 위한 memberNo 얻어오기 -->
+	<entry key="getMemberNo2">
+		SELECT MEMBER_NO
+		FROM MEMBER
+		WHERE MEMBER_ID = ?
+	</entry>
+	
+	<!-- FAQ 작성 -->
+	<entry key="FAQUpdate">
+		INSERT INTO BOARD VALUES(SEQ_BOARD_NO.NEXTVAL ,? ,? ,DEFAULT ,DEFAULT ,4 ,? ,NULL ,NULL)
+	</entry>
+
+	<!-- FAQ 수정 -->
+	<entry key="FAQAlter">
+		UPDATE BOARD
+		SET BOARD_CONTENT = ?,
+		BOARD_TITLE = ?
+		WHERE BOARD_CD = 4
+		AND MEMBER_NO = ?
+		AND BOARD_NO = ?
+		AND BOARD_TITLE = ?
+		AND BOARD_ST = 'N'
+	</entry>
+
+	<!-- FAQ 수정을 위한 boardNo 가져오기 -->
+	<entry key="getFAQBoardNo">
+		SELECT BOARD_NO
+		FROM BOARD
+		WHERE BOARD_CD = 4
+		AND BOARD_TITLE = ?
+		AND MEMBER_NO = ?
+	</entry>
+
+	<!-- 리뷰 수정을 위한 boardNo 가져오기 -->
+	<entry key="getBoardNo">
+		SELECT BOARD_NO
+		FROM BOARD
+		JOIN MEMBER USING(MEMBER_NO)
+		WHERE BOARD_NO = ?
+		AND BOARD_CD = 3
+		AND MEMBER_ID = ?
+	</entry>
+
+	<!-- 리뷰 수정 -->
+	<entry key="reviewAlter">
+		UPDATE BOARD
+		SET BOARD_CONTENT = ?, REVIEW_STAR = ?
+		WHERE BOARD_NO = ?
+		AND BOARD_CD = 3
+		AND MEMBER_NO = ?
+		AND REVIEW_STAR = ?
+	</entry>
+
+	<!-- 회원가입시 이벤트 참여 여부 N -->
+	<entry key="insertEventCheck">
+		INSERT INTO EVENT_FL
+		VALUES(DEFAULT, DEFAULT, ?)
+	</entry>
+	
+	<!-- 새로운 회원 번호 조회 -->
+	<entry key="memberNextNo">
+		SELECT MAX (MEMBER_NO) FROM MEMBER
+	</entry>
+
+	<!-- 이미지 수정 -->
+	<entry key="imgUpdate">
+		UPDATE REVIEW_IMG
+		SET IMG_REVIEW_RENAME = ? 
+		WHERE BOARD_NO = ?
+		AND IMG_REVIEW_RENAME = ?
+	</entry>
+
+	<!-- 태그 수정 -->
+	<entry key="tagUpdate">
+		UPDATE TAG
+		SET TAG_CONTENT = ?
+		WHERE BOARD_NO = ?
+		AND TAG_CONTENT = ?
+		AND TAG_ST = 'Y'
+	</entry>
+	
+	<!-- 빙고게임 후 쿠폰 증정 -->
+	<entry key="couponIn">
+		INSERT INTO COUPON VALUES(SEQ_COUPON_NO.NEXTVAL,?,'30000원 할인 쿠폰',30000,DEFAULT,DEFAULT)
+								  
+	</entry>
+
+	<!-- 이벤트 참여 여부 -->
+	<entry key="flUpdate">
+		UPDATE EVENT_FL
+		SET BINGO_FL = 'Y'
+		WHERE MEMBER_NO = ?
+	</entry>
+
+	<!-- 이벤트 참여 여부 가져오기 -->
+	<entry key="eventFL">
+		SELECT BINGO_FL
+		FROM EVENT_FL
+		WHERE MEMBER_NO =  ?
+	</entry>
+</properties>

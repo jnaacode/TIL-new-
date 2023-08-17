@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+
+    <link rel="stylesheet" href="../resources/css/Bingo.css">
+    <style>
+        table{
+            width: 500px;
+            height: 500px;
+        }
+
+        .pink{
+            background-color: pink;
+        }
+
+        .bingoImg{
+            width: 50px;
+        height: 50px;   
+        }
+       
+        td{
+            color : transparent;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <h1>console만 사용 예정</h1>
+    <table style="border: 1px">
+        <tr id="tr1">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="tr2">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="tr3">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="tr4">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="tr5">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <form action="https://www.naver.com/" onsubmit="return bingo()">
+        <input type="text" name="input" id="input">
+        <button id="btn">제출</button>
+    </form>
+
+    <span>빙고 : </span><span id="span"></span>
+
+    <script src="../resources/js/bingo2.js"></script>
+</body>
+</html>

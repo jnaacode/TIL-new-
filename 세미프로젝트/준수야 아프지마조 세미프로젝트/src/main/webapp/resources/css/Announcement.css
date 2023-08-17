@@ -1,0 +1,384 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+section.notice {
+  padding: 80px 0;
+}
+
+.page-title {
+  margin-bottom: 60px;
+}
+.page-title h3 {
+  font-size: 28px;
+  color: #333333;
+  font-weight: 400;
+  text-align: center;
+}
+
+#board-search .search-window .search-wrap {
+  position: relative;
+  padding-right: 124px;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 564px;
+  left: 520px;
+  bottom: 100px;
+}
+#board-search .search-window .search-wrap input {
+  height: 40px;
+  width: 50%;
+  font-size: 14px;
+  padding: 7px 14px;
+  border: 1px solid #ccc;
+}
+#board-search .search-window .search-wrap input:focus {
+  border-color: #333;
+  outline: 0;
+  border-width: 1px;
+}
+#board-search .search-window .search-wrap .btn {
+  position: absolute;
+  right: 210px;
+  top: 0;
+  bottom: 0;
+  width: 108px;
+  padding: 0;
+  font-size: 16px;
+}
+
+.board-table {
+  font-size: 13px;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.board-table a {
+  color: #333;
+  display: inline-block;
+  line-height: 1.4;
+  word-break: break-all;
+  vertical-align: middle;
+}
+.board-table a:hover {
+  text-decoration: underline;
+}
+.board-table th {
+  text-align: center;
+}
+
+.board-table .th-num {
+  width: 100px;
+  text-align: center;
+}
+
+.board-table .th-date {
+  width: 200px;
+}
+
+.board-table th, .board-table td {
+  padding: 14px 0;
+}
+
+.board-table tbody td {
+  border-top: 1px solid #e7e7e7;
+  text-align: center;
+}
+
+.board-table tbody th {
+  padding-left: 28px;
+  padding-right: 14px;
+  border-top: 1px solid #e7e7e7;
+  text-align: left;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0 30px;
+  font-size: 15px;
+  font-weight: 400;
+  background: transparent;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.btn-dark {
+  background: #555;
+  color: #fff;
+}
+
+.btn-dark:hover, .btn-dark:focus {
+  background: #373737;
+  border-color: #373737;
+  color: #fff;
+}
+
+.btn-dark {
+  background: #555;
+  color: #fff;
+}
+
+.btn-dark:hover, .btn-dark:focus {
+  background: #373737;
+  border-color: #373737;
+  color: #fff;
+}
+
+/* reset */
+
+* {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+.blind {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+}
+/* div{border: 1px solid black;} */
+
+.list{
+  justify-content: center;
+  height: 100px;
+  text-align: center;
+}
+
+.body1img{
+ width: 400px;
+ height: 250px;
+ margin: auto;
+}
+
+
+.body1{
+ display: flex;
+}
+
+.body2{
+ display: flex;
+}
+
+.body2img{
+ width: 400px;
+ height: 250px;
+ margin: auto;
+}
+
+
+.H-info-text{ /* 글씨 부분 큰 div */
+ width: 50%;
+ margin-right: 100px;
+}
+
+.H-info-text li{
+ text-align: left;
+}
+
+.H-info-text pre{
+ font-size: 18px;
+}
+
+body{
+  margin: auto;
+} 
+.wrapper{
+  min-height: 100vh;
+  background: #ccc;
+  display: flex;
+  flex-direction: column;
+}
+.header, .footer{
+  height: 50px;
+  background: #666;
+  color: #fff;
+}
+.content {
+  display: flex;
+  flex: 1;
+  background: #999;
+  color: #000; 
+  width: 1200px;
+  margin: auto;
+}
+.columns{
+  display: flex;
+  flex:1;
+}
+.main{
+  flex: 1;
+  order: 2;
+  background: #eee;
+}
+.sidebar-first{
+  width: 20%;
+  background: #ccc;
+  order: 1;
+}
+.sidebar-second{ 
+  width: 20%;
+  order: 3;
+  background: brown;
+}
+
+*{box-sizing: border-box;}
+body{margin: 0; padding: 0;}
+
+div a{
+   text-decoration: none;
+}
+
+/* 전체 */
+.P-container{
+   background-color: #AFBDCA;
+   width: 100%;
+   position: sticky;
+   top: 0;
+   z-index: 1;
+   opacity: 0.7;
+   backdrop-filter: blur(30px);
+ 
+   
+}
+
+.P-header_middle > img{
+   width: 200px;
+   margin-top: 10px;
+}
+
+
+
+/* 가운데header */
+.P-header{
+   display: flex;
+   height: 120px;
+   width: 1200px;
+   margin: auto;
+   justify-content: space-between;
+   background-color: #F1E3C4;
+   
+
+}
+
+/* 왼쪽 상단 빈칸 */
+.P-blank{
+   padding: 5px 150px;
+   height: 50%;
+   width: 30%;
+
+}
+
+/* 호텔찾기/예약 */
+.P-btn1{
+   height: 50%;
+   display : flex;
+   justify-content : center;
+   align-items : center;
+   justify-content: space-around;
+   font-size: 15px;
+   font-weight: bold;
+  
+
+}
+.P-btn1>a:nth-child(1):after{
+   display:block;
+   content: '';
+   border-bottom: solid 3px rgba(131, 105, 75, 0.72);  
+   transform: scaleX(0);  
+   transition: transform 250ms ease-in-out;
+}
+
+.P-btn1>a:nth-child(1):hover:after{ transform: scaleX(1); }
+.P-btn1>a:nth-child(1):hover{color: black;}   
+.P-btn1>a:nth-child(2):after{
+   display:block;
+   content: '';
+   border-bottom: solid 3px rgba(131, 105, 75, 0.72);  
+   transform: scaleX(0);  
+   transition: transform 250ms ease-in-out;
+}
+
+.P-btn1>a:nth-child(2):hover:after{ transform: scaleX(1); }
+.P-btn1>a:nth-child(2):hover  {color: black;}
+.P-btn1>a{color: black;}
+
+/* 로그인 nav */
+.P-btn2{
+   font-size: 13px;
+   padding: 25px;
+   height: 50%;
+   display: block;
+   justify-content: right;
+   padding-left: 0;
+
+}
+
+.P-btn2>ul a{color: black;} 
+
+/* 커뮤니티 / 이벤트 */
+.P-btn3{
+   height: 50%;
+   display : flex;
+   justify-content : center;
+   align-items : center;
+   justify-content: space-around;
+   font-size: 15px;
+   font-weight: bold;
+   text-transform:uppercase;
+   
+}
+
+.P-btn3>a{color: black;}
+
+.P-btn3>a:nth-child(1):after {
+   display:block;
+   content: '';
+   border-bottom: solid 3px rgba(131, 105, 75, 0.72);  
+   transform: scaleX(0);  
+   transition: transform 250ms ease-in-out;
+}
+.P-btn3>a:nth-child(1):hover:after{ transform: scaleX(1); }
+.P-btn3>a:nth-child(1):hover {color: black;}
+.P-btn3>a:nth-child(2):after{
+   display:block;
+   content: '';
+   border-bottom: solid 3px rgba(131, 105, 75, 0.72);  
+   transform: scaleX(0);  
+   transition: transform 250ms ease-in-out;
+}
+.P-btn3>a:nth-child(2):hover:after{ transform: scaleX(1); }
+.P-btn3>a:nth-child(2):hover{color: black;}
+
