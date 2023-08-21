@@ -442,6 +442,7 @@ checkAuthKeyBtn.addEventListener("click", function(){
         fetch("/sendEmail/checkAuthKey?" + query)
         .then(resp => resp.text())
         .then(result => {
+            
             if(result > 0){
                 clearInterval(authTimer);
                 authKeyMessage.innerText = "인증되었습니다.";

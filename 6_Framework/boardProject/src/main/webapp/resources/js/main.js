@@ -50,7 +50,10 @@ function selectNickname(email){
     .then(nickname => {console.log(nickname)}) // 첫 번째 then에서 파싱한 데이터를 이용한 동작 작성
 
     .catch(e => {console.log(e)}) // 예외 발생시 처리할 내용을 작성
+
 }
+
+
 
 // 닉네임이 일치하는 회원의 전화번호 조회
 const inputNickname = document.getElementById("inputNickname");
@@ -129,15 +132,11 @@ btn2.addEventListener("click",()=>{
 
         result2.append(li1,li2,li3,li4,li5,li6);
 
-
-
-
     })
     .catch( err => {
         console.log(err)
         result2.innerText ="일치하는 회원이 없습니다."
     })
-
 
 })
 

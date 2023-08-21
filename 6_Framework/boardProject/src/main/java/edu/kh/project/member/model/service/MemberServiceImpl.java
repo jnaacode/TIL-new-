@@ -22,7 +22,7 @@ public class MemberServiceImpl implements MemberService {
 	// -> 객체를 직접 만들지 않고, Spring이 만든걸 주입함
 	@Autowired
 	private MemberDAO dao;
-	
+		
 	@Autowired // bean으로 등록된 객체 중 타입이 일치하는 객체를 DI
 	private BCryptPasswordEncoder bcrypt;
 

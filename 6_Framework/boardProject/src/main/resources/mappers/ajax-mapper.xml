@@ -19,8 +19,8 @@
 		<result property="authority" column="AUTHORITY" />
 	</resultMap>
 
-
-
+	
+	
 	<!-- 이메일로 닉네임 조회 -->
 	<select id="selectNickname" parameterType="string"
 		resultType="string">

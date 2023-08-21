@@ -32,6 +32,7 @@ public class AjaxController {
 		
 	}
 	
+	
 	// 닉네임으로 전화번호 조회 
 	@GetMapping("/selectMemberTel")
 	@ResponseBody
