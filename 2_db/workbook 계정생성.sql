@@ -16,3 +16,6 @@ GRANT CONNECT, RESOURCE TO workbook;
 -- alter user [유저명] default tablespace [테이블스페이스] quota unlimited on [테이블스페이스];
 ALTER USER C##workbook DEFAULT TABLESPACE SYSTEM QUOTA UNLIMITED ON SYSTEM;
 ALTER USER workbook DEFAULT TABLESPACE SYSTEM QUOTA UNLIMITED ON SYSTEM;
+
+CREATE TABLE MEMBER(
+

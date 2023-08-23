@@ -7,6 +7,7 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import edu.kh.project.board.model.dao.BoardDAO;
 import edu.kh.project.board.model.dto.Board;
@@ -37,7 +38,7 @@ public class BoardServiceImpl implements BoardService {
 		//  -> 내부 필드가 모두 계산되어 초기화 됨
 		Pagination pagination = new Pagination(cp, listCount);
 		
-		System.out.println(pagination);
+		//System.out.println(pagination);
 		
 		// 3. 특정 게시판에서 
 		//    현재 페이지에 해당하는 부분에 대한 게시글 목록 조회 
@@ -47,7 +48,7 @@ public class BoardServiceImpl implements BoardService {
 		//  게시글 몇 개(pagination.limit)조회)
 		List<Board> boardList = dao.selectBoardList(pagination,boardCode);
 		
-		System.out.println(boardList);
+		//System.out.println(boardList);
 		
 		//4.pagination / boardList Map 담아서 반환
 		Map<String, Object> map = new HashMap<>();
@@ -69,6 +70,39 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public int boardLikeCheck(Map<String, Object> map) {
 		return dao.boardLikeCheck(map);
+	}
+
+	// 좋아요 처리 서비스 
+	@Transactional(rollbackFor = Exception.class)
+	@Override
+	public int like(Map<String, Integer> paramMap) {
+		
+		int result = 0;
+		if(paramMap.get("check") == 0) { // 좋아요 상태가 x
+			//BOARD_LIEK 테이블 INSERT
+			result = dao.insertBoardLike(paramMap);
+			
+		}else { //좋아요 상태 o 
+			// BOARD_LIKE 테이블 DELETE
+			result = dao.delectBoardLike(paramMap);
+		}
+		
+		// SQL 수행 결과 0 -> DB또는 파라미터에 문제가 있다.
+		// 1) 에러를 나타내는 임의의 값을 반환 (-1)
+		if(result == 0) return -1;
+		
+		// 현재 게시글의 좋아요 개수 조회 ->나만 좋아요 누르는게 아닌 다른 사람도 눌러! 
+		int count = dao.countBoardLike(paramMap.get("boardNo"));
+		
+		return count;
+	}
+
+	// 조회 수 증가 서비스
+	@Transactional(rollbackFor = Exception.class)
+	@Override
+	public int updateReadCount(int boardNo) {
+		
+		return dao.updateReadCount(boardNo);
 	}
 
 }
