@@ -171,11 +171,10 @@ public class BoardController {
 				
 				if(c==null) {
 					// 쿠키가 존재 x -> 하나 새로 생성
-					c = new Cookie("readBoardNo","|"+boardNo+"|"); // |1|2|3|4 이런식으로 출력
+					c = new Cookie("readBoardNo","|"+boardNo+"|"); // |1||2||4||3|이런식으로 출력 
 					
 					// 조회수 증가 서비스 호출 
 					result = service.updateReadCount(boardNo);
-					
 				}else {
 					// 현재 게시글 번호가 쿠기에 있는지 확인 
 					// Cookie.getValue(): 쿠키에 저장된 모든 값을 읽어옴(String 반환)
