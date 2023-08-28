@@ -93,6 +93,7 @@ public class OpenAPIController {
 	}
 	
 	// xml 형식으로 지진해일 대피소 openApi 활용하기
+	
 	@ResponseBody
 	@RequestMapping(value ="sea", produces = "text/xml; charset=UTF-8" )
 	public String shelterList() throws IOException {
@@ -130,8 +131,6 @@ public class OpenAPIController {
 		
 		
 	}
-	
-	
 	
 	
 }

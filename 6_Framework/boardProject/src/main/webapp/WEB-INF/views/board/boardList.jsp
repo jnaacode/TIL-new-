@@ -95,12 +95,12 @@
             </div>
 
 
-            <div class="btn-area">
-
-            <!-- 로그인 상태일 경우 글쓰기 버튼 노출 -->
-                <button id="insertBtn">글쓰기</button>                     
-
-            </div>
+            <c:if test="${!empty loginMember}" >
+                <div class="btn-area">
+                <!-- 로그인 상태일 경우 글쓰기 버튼 노출 -->
+                    <button id="insertBtn">글쓰기</button>                     
+                </div>
+            </c:if>
 
 
             <div class="pagination-area">
@@ -171,6 +171,8 @@
 
 
     <jsp:include page="/WEB-INF/views/common/footer.jsp"/>
+
+    <script src="/resources/js/board/boardList.js"></script>
 
 </body>
 </html>

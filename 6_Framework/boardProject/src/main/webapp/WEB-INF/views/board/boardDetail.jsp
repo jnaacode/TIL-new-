@@ -193,9 +193,6 @@
         console.log(loginMemberNo);
 
 
-    </script>
-
-    <script src = "/resources/js/board/boardDetail.js"></script>
 
 </body>
 </html>
