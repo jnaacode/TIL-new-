@@ -72,7 +72,7 @@
                     <p> <span>작성일</span> ${board.boardCreateDate} </p>     
 
                       <!-- 수정한 게시글인 경우 -->
-                    <c:if test="{!empty board.boardUpdate}" >
+                    <c:if test="${!empty board.boardUpdateDate}" >
                         <p> <span>마지막 수정일</span>  ${board.boardUpdateDate} </p>   
                     </c:if>    
                   
@@ -193,6 +193,9 @@
         console.log(loginMemberNo);
 
 
+    </script>
+    
+    <script src="/resources/js/board/boardDetail.js"></script>
 
 </body>
 </html>

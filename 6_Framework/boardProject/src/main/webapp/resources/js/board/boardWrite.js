@@ -50,6 +50,12 @@ for(let i=0;i<inputImage.length;i++){
     })
 }
 
+
+for(let i=o;i<inputImage.length;i++){
+    
+    inputImage[i].addEventListener.file[0]
+}
+
  // 게시글 등록 시 제목, 내용 작성 여부 검사 
 const boardWriteFrm = document.getElementById("boardWriteFrm");
 //const boardTitle = document.getElementById("#boardWriteFrm > h1.board-title > input[type=text]");
@@ -68,9 +74,10 @@ boardWriteFrm.addEventListener("submit",e=>{
 
     if(boardContent.value.trim().length==0){
         alert("내용을 입력해주세요");
-        boardTitle.value="";
-        boardTitle.focus();
+        boardContent.value="";
+        boardContent.focus();
         e.preventDefault();
         return;
     }
 });
+
