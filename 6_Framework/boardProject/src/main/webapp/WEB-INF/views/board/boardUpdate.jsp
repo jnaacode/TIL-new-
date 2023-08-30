@@ -134,7 +134,7 @@
             <%-- 기존 이미지가 있다가 삭제된 이미지의 순서를 기록 --%>
             <input type = "hidden" name = "deleteList" value="">
 
-            <%-- 수정 성공 시 주소(쿼리스트링) 유지 용도--%>
+            <%-- 수정 성공 시 주소(쿼리스트링)  유지 용도--%>
             <input type ="hidden" name="cp" value="${param.cp}">
 
             

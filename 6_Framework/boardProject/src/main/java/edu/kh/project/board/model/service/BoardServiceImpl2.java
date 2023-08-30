@@ -149,6 +149,7 @@ public class BoardServiceImpl2 implements BoardService2 {
 				deleteMap.put("deleteList", deleteList);
 
 				rowCount = dao.imageDelete(deleteMap);
+				System.out.println("삭제:"+rowCount);
 
 				if (rowCount == 0) { // 이미지 삭제 실패 시 전체 롤백 (예외 강제 발생)
 
@@ -188,10 +189,15 @@ public class BoardServiceImpl2 implements BoardService2 {
 					
 					rowCount = dao.imageUpdate(img);
 					
+					System.out.println("업데이트:"+rowCount);
+					System.out.println("업데이트uploadList:"+uploadList);
+					
 					
 					if(rowCount == 0) { // 수정실패 (db에 이미지가 없을 경우!) 
 										// 이미지 삽입 !
 						rowCount = dao.imageInsert(img);
+						
+						System.out.println("삽입:"+rowCount);
 					}
 						
 				}

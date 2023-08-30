@@ -16,6 +16,8 @@ const deleteSet = new Set(); // 순서X, 중복X
 
 // -> 위에 얻어온 요소들의 개수가 같음 == 인덱스가 일치함
 for(let i = 0; i < inputImage.length; i++){
+
+    console.log(inputImage[i]); 
     
     // 파일이 선택되거나, 선택 후 취소 되었을 때
     inputImage[i].addEventListener("change", e=>{
@@ -101,8 +103,8 @@ boardUpdateFrm.addEventListener("submit", e=>{
     // 요소,요소,요소 형태의 문자열을 반환한다!
 
     document.querySelector("[name='deleteList']").value
-        = Array.from(deleteSet);
+       = Array.from(deleteSet);
 
-    // e.preventDefault(); // 확인만하고 지울 예정
+     //e.preventDefault(); // 확인만하고 지울 예정
 
 })
