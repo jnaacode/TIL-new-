@@ -191,6 +191,28 @@
 	});
 			
 	
+	$function(){
+		#("btn1").click(function(){
+			
+			$.ajax({
+				
+				url : "주소",
+				date : {"location" : #("location").val()},
+				success: function(result){
+					
+					
+					
+					
+				},error :function(){
+					console.log("통신오류")
+				}
+					
+				
+			})
+			
+		})
+	}
+	
 	</script>
 
 </body>

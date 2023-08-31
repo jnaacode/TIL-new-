@@ -83,16 +83,28 @@ public class BoardController {
 	public String selectBoardList(@PathVariable("boardCode") int boardCode
 								 // 파라미터중 cp 얻어올거오! 있을 수도 있고 없을 수도 있지만 없다면 1이라고 할게! 
 								 ,@RequestParam(value = "cp",required = false, defaultValue = "1") int cp
-								 ,Model model) {
+								 ,Model model
+								 ,@RequestParam Map<String, Object> paramMap) {
 
 		// boardCode 확인
 		//System.out.println("boardCode ; "+ boardCode);
 		
-		// 게시글 목록 조회 서비스 호출
-		Map<String, Object> map = service.selectBoardList(boardCode,cp);
-		
-		// 조회 결과를 request scope에 세팅 후 forward 
-		model.addAttribute("map",map);
+		// 검색어가 없을때
+		if(paramMap.get("key")==null) {
+
+			// 게시글 목록 조회 서비스 호출
+			Map<String, Object> map = service.selectBoardList(boardCode,cp);
+			
+			// 조회 결과를 request scope에 세팅 후 forward 
+			model.addAttribute("map",map);
+			
+		}else {
+			paramMap.put("boardCode", boardCode);
+			Map<String, Object> map = service.selectBoardList(paramMap, cp);
+			
+			model.addAttribute("map",map);
+			
+		}
 		
 		return "board/boardList";
 	}
