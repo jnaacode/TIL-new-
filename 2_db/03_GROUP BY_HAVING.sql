@@ -31,6 +31,10 @@ SELECT DEPT_CODE,SUM(SALARY)
 FROM EMPLOYEE
 GROUP BY DEPT_CODE;
 
+SELECT DEPT_CODE,SUM(SALARY)as 합계
+FROM EMPLOYEE
+having avg(salary)>100;
+
 -- EMPLOYEE 테이블에서 
 -- 부서코드,부서 별 급여의 합계, 부서 별 급여의 평균(정수처리), 인원 수를 조회하고 
 -- 부서 코드 순으로 정렬 

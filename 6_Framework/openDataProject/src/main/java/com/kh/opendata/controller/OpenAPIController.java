@@ -7,6 +7,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLConnection;
 import java.net.URLEncoder;
 
 import org.springframework.stereotype.Controller;
@@ -104,30 +105,28 @@ public class OpenAPIController {
 		url += "&numOfRows=20";
 		url += "&type=xml";
 		
-		URL requestUrl = new URL(url);
+		  URL requestUrl = new URL(url);
+		  
+		  System.out.println(requestUrl);
+		  
+		  HttpURLConnection urlConn = (HttpURLConnection)requestUrl.openConnection();
+		  
+		  urlConn.setRequestMethod("GET");
+		  
+		  BufferedReader br = new BufferedReader(new
+		  InputStreamReader(urlConn.getInputStream()));
+		  
+		  String responseText =""; String line;
+		  
+		  while((line = br.readLine())!=null) { responseText += line; }
+		  
+		  br.close(); urlConn.disconnect();
+		  
+		  
+		 System.out.println(responseText); return responseText;
+		 
 		
-		System.out.println(requestUrl);
-		
-		HttpURLConnection urlConn = (HttpURLConnection)requestUrl.openConnection();
-		
-		urlConn.setRequestMethod("GET");
-		
-		BufferedReader br = new BufferedReader(new InputStreamReader(urlConn.getInputStream()));
-		
-		String responseText ="";
-		String line;
-		
-		while((line = br.readLine())!=null) {
-			responseText += line;
-		}
-		
-		br.close();
-		urlConn.disconnect();
-		
-		
-		System.out.println(responseText);
-		return responseText;
-		
+
 		
 		
 	}
