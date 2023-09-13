@@ -387,3 +387,7 @@ CREATE SEQUENCE SEQ_MESSAGE_NO NOCACHE;
                FROM MESSAGE M
                WHERE R.CHATTING_NO  = M.CHATTING_NO), CH_CREATE_DATE), 
                'YYYY.MM.DD') SEND_TIME;
+               
+               
+               
+            
